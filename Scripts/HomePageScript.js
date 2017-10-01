@@ -54,7 +54,7 @@ var PS = window.PS ||
 	{
 		
 		//$("div#PSRightNav").empty();
-		var p = RunAjax(_spPageContextInfo.siteServerRelativeUrl + "/_api/web/lists/getByTitle('HomepageMenu')/items?$filter=Location eq 'Right'");
+		var p = RunAjax(_spPageContextInfo.siteAbsoluteUrl  + "/_api/web/lists/getByTitle('HomepageMenu')/items?$filter=Location eq 'Right'");
 		p.done(function(data){
 		
 			console.log(data);
