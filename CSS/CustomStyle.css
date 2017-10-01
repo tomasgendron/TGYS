@@ -1,0 +1,238 @@
+﻿
+.ms-core-navigationXYZ { DISPLAY: none }
+#contentBoxXYZ { margin-left: 0px;background-color:#d0d0d0 }
+/*#sideNavBox { DISPLAY: none } */
+
+#s4-ribboncont {
+background-color:#042862;}
+
+
+
+
+.ms-srch-sb {display:none;}
+
+#RibbonContainer-TabRowRight a[id$=site_share_button] {
+display: none;
+}
+/*#pageTitle {display:none} */
+/*
+#DeltaPlaceHolderPageTitleInTitleArea {display:none}
+
+
+
+
+*/
+/*#contentRow
+{
+	
+	background-image: url("/PublishingImages/SitePages/Home/bgdos.jpg");
+} */
+
+#pageTitle {
+    display: block;
+	font-weight: bold;
+    font-size: 1.2em;
+    white-space: nowrap;
+    margin-left: 450px;
+}
+
+.ms-breadcrumb-top
+{
+	margin-left: 450px;
+}
+
+#suiteBarTop 
+{
+background-color:#042862;
+
+}
+div#DeltaSiteLogo
+{
+	display:block;
+	
+}
+#s4-bodyContainer > #s4-titlerow {
+
+background-image: url("/sites/CBV/siteassets/images/banner.png") !important;
+}
+
+
+.ms-breadcrumb-top .menu-item-text
+{
+	color:#ffffff;
+	
+}
+
+/* Home page styles */
+
+.homePageCategory
+{
+color:#808080;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div#PSMiddleContent{
+background-color:#e9eff1;
+width:70%;
+}
+
+div#PSLeftNav div
+{
+	margin-bottom:10px;
+	padding:5px 5px 5px 5px;
+	width: 100px;
+	}
+	
+div#PSRightNav div
+{
+	margin-bottom:1px;
+	padding:5px 5px 5px 5px;
+	width: 150px;
+	}	
+	
+	div#PSLeftNav a,div#PSLeftNav a:hover,div#PSLeftNav a:active,div#PSLeftNav a:visited { color: white; }
+	div#PSRightNav a,div#PSRightNav a:hover,div#PSRightNav a:active,div#PSRightNav a:visited { color: white; }
+
+	.ms-promlink-header {
+display: none;
+}
+	
+/* end home page */
+
+/* top nav div, ul, li, a {margin: 0; padding: 0; border: 0;} */
+
+body {
+    background-color: #fff;
+}
+nav {
+    background-color: #ede9d7;
+    position: relative;
+    width: 100%;
+}
+ul {
+    list-style: none;
+    
+}
+li.mtop {
+    display: inline-block;
+}
+li.mtop a {
+     display: block; 
+     padding: 0.25em 1em; 
+}
+nav > ul {
+    margin: 0 auto;
+    width: 1024px;
+}
+nav ul li div { /* nested div (containing the sub nav) will be hidden by default */
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    left: -9999px;
+	z-index:999999;
+}
+nav ul li div ul {
+    margin: 0 auto;
+    /* width: 1024px; */
+}
+nav ul li div table {
+	background-color:#fff;
+    margin: 0 auto;
+    width: 1024px;
+	border:1px solid #ede9d7;
+	margin-bottom:10px;
+}
+nav ul li div table table {
+	background-color:#fff;
+	border:none;
+	width:800px;
+}
+.menuHtmlHeading
+{
+	font-weight:bold;
+}
+.menuHtmlRight
+{
+	width: 75%; 
+	vertical-align: top; 
+
+}
+nav ul li div div
+{
+		
+	left:0px;
+	position:relative;
+	margin-bottom:10px;
+	
+}
+
+nav ul li div table div {
+	
+	left:0px;
+	position:relative;
+	margin-bottom:10px;
+}
+
+nav > ul > li:hover > a {  /* swap ":hover" with ".active" to allow this to work as a class */
+    background-color: #ccc;
+}
+nav > ul > li:hover > div { /* swap ":hover" with ".active" to allow this to work as a class */
+    left: 0;
+	/* color:green; */
+}	
+nav td{vertical-align:top;}
+/* end top nav */
+
+/* rotator  */
+
+.PSRotSelected
+{
+	/* background-color:#B9D2EE;*/
+	font-weight:bold;
+	padding:7px;
+	background-color:#F1F1E9;
+}
+.PSRotNotSelected
+{
+
+	padding:7px;
+	background-color:#F1F1E9;
+}
+
+#rotLeftImage{
+	
+	height:255px;
+	
+}
+.rotImage{
+	height:255px;
+	
+}
+#rotRightTable{
+	border: none;
+	
+}
+
+#rotCentre
+{
+	padding: 0px 15px 0px 15px;
+	
+}
+
+.PSRotator{
+	width:790px;
+	margin-right:40px;
+	border-style: solid !important;
+    border-color: #DFD9D2 !important;
+	border-width: 1px !important;	
+	
+}
+#rotLeftContent{}
+#rotLeftTitle{}
+#rotLeftSubTitle{}
+#rotRight{
+	padding: 0px;
+	background-color:#F1F1E9;
+}
+
+/* end rotator */

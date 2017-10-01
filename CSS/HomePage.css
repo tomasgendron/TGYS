@@ -1,0 +1,11 @@
+#sideNavBox { DISPLAY: none }
+.ms-webpartPage-root {
+   border-spacing: 1px; 
+}
+#contentBox { margin-left: 0px }
+.ms-webpartzone-cell,
+.ms-webpart-zone {
+    border-collapse: collapse;
+}
+#pageTitle {display:none} 
+div.ms-breadcrumb-top {display:none} 

@@ -1,5 +1,8 @@
 /*
 
+Oct 1st. Tomas and Yogi changes 
+
+
 this code runs against this html from your page
 
 <div id="PSRotator" class='PSRotator'>
@@ -11,7 +14,7 @@ this code runs against this html from your page
 <h3 id='rotLeftSubTitle'></h3>
 <p id='rotLeftContent'></p>
 </div>
-  
+
 </td>
 
 <td valign='top' id="rotRight">
@@ -22,6 +25,14 @@ this code runs against this html from your page
 
 </tr></table>
 </div>
+<script>
+
+function runWhenJQueryLoaded()
+{
+	$.getScript( _spPageContextInfo.siteAbsoluteUrl + "/SiteAssets/js/PSRotator.js" );
+       
+}
+</script>
 
 
 */
@@ -33,6 +44,7 @@ var PSRotator = window.PSRotator ||
   {
 	  _rdata=null;
 	  _rotIdx = 1;
+	  _maxItems = 5; // this will control how many items are shown in the rotator. make sure the list has at least this many items!
 	  
 	  // this func will stop the timer from fliping news items
 	  function SetRotatorMemStop(idx)
@@ -84,9 +96,11 @@ var PSRotator = window.PSRotator ||
 	   }
 	  
 		SetRotator(0);
+
+		// limit is set by the $top only
 		function LoadRotatorData()
 		{
-			var p = RunAjax(_spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/GetByTitle('NewsRotator')/items?$orderby=Order0&$top=5");
+			var p = RunAjax(_spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/GetByTitle('NewsRotator')/items?$orderby=Order0&$top=" + _maxItems);
 			p.done(function(rdata){
 				console.log(rdata);
 				_rdata = rdata;
@@ -95,13 +109,13 @@ var PSRotator = window.PSRotator ||
 			
 		}
 
-		var myTimerId = setInterval(myTimer, 20000);
+		var myTimerId = setInterval(myTimer, 60000);
 
 		function myTimer() {
 
 			SetRotator(_rotIdx);
 			_rotIdx+=1;
-			if(_rotIdx>=5)
+			if(_rotIdx>= _maxItems)
 				_rotIdx=0;
 			//
 		}	

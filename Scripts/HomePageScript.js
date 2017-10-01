@@ -6,7 +6,7 @@ var PS = window.PS ||
 
   PS.Lib = function()
   {
-	  var attemptCount = 0;
+	var attemptCount = 0;
     var subhash = {}; // by vendor
 	
 	var RunAjax = function(restUrl) {
@@ -79,7 +79,7 @@ var PS = window.PS ||
 		if (typeof runWhenJQueryLoaded== 'function') { 
               runWhenJQueryLoaded(); 
         }
-	});
+	})
 	
 
 		
