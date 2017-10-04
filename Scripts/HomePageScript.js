@@ -75,6 +75,18 @@ var PS = window.PS ||
 		//$("#pageTitle").before("Our World: The CBV Intranet Portal");
 		loadLeftNav();
 		loadRightNav();
+
+
+// check if in edit mode
+var inDesignMode = document.forms[MSOWebPartPageFormName].MSOLayout_InDesignMode.value;
+
+if (inDesignMode == "1")
+{
+
+$("#s4-ribbonrow").attr("height","35px");
+$("#s4-ribboncont").show();
+}
+
 		
 		if (typeof runWhenJQueryLoaded== 'function') { 
               runWhenJQueryLoaded(); 

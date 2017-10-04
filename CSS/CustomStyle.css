@@ -1,12 +1,18 @@
 ﻿
 .ms-core-navigationXYZ { DISPLAY: none }
-#contentBoxXYZ { margin-left: 0px;background-color:#d0d0d0 }
+
 /*#sideNavBox { DISPLAY: none } */
 
+
+
+/* this controls the bar with Share follow */
 #s4-ribboncont {
-background-color:#042862;}
+background-color:#000000;}
 
-
+.ms-core-pageTitle, .ms-core-pageTitle a
+{
+	color:white !important;
+}
 
 
 .ms-srch-sb {display:none;}
@@ -53,7 +59,7 @@ div#DeltaSiteLogo
 }
 #s4-bodyContainer > #s4-titlerow {
 
-background-image: url("/sites/CBV/siteassets/images/banner.png") !important;
+background-image: url("/SiteAssets/images/CONA_bar2-2.jpg") !important;
 }
 
 
@@ -67,8 +73,14 @@ background-image: url("/sites/CBV/siteassets/images/banner.png") !important;
 
 .homePageCategory
 {
-color:#808080;
+	color:#000000;
 	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #000000;
+}
+
+div#PSRightNav > div > div
+{
+	border-bottom: 1px solid #777777;
 }
 
 div#PSMiddleContent{
@@ -90,8 +102,14 @@ div#PSRightNav div
 	width: 150px;
 	}	
 	
-	div#PSLeftNav a,div#PSLeftNav a:hover,div#PSLeftNav a:active,div#PSLeftNav a:visited { color: white; }
-	div#PSRightNav a,div#PSRightNav a:hover,div#PSRightNav a:active,div#PSRightNav a:visited { color: white; }
+	div#PSLeftNav a,div#PSLeftNav a:hover,div#PSLeftNav a:active,div#PSLeftNav a:visited 
+{ 
+	color: rgb(2,69,37)
+}
+	div#PSRightNav a,div#PSRightNav a:hover,div#PSRightNav a:active,div#PSRightNav a:visited 
+{ 
+	color: rgb(2,69,37);
+}
 
 	.ms-promlink-header {
 display: none;
@@ -105,10 +123,21 @@ body {
     background-color: #fff;
 }
 nav {
-    background-color: #ede9d7;
+    background-color: #000000;
     position: relative;
     width: 100%;
 }
+nav a, a:hover, a:active
+{
+color: white;
+text-decoration:none;
+}
+
+nav td
+{
+background-color:#000000;
+}
+
 ul {
     list-style: none;
     
@@ -136,20 +165,26 @@ nav ul li div ul {
     /* width: 1024px; */
 }
 nav ul li div table {
-	background-color:#fff;
+	background-color:#000000;
     margin: 0 auto;
     width: 1024px;
-	border:1px solid #ede9d7;
+	border:1px solid #000000;
 	margin-bottom:10px;
 }
 nav ul li div table table {
-	background-color:#fff;
+	background-color:#000000;
 	border:none;
 	width:800px;
+}
+.menuHtmlContent
+{
+
+	color:#ffffff;
 }
 .menuHtmlHeading
 {
 	font-weight:bold;
+	color:#ffffff;
 }
 .menuHtmlRight
 {
@@ -157,6 +192,16 @@ nav ul li div table table {
 	vertical-align: top; 
 
 }
+nav ul > li:hover
+{
+	background-color: rgb(2,69,37);
+}
+nav td > ul > li
+{
+	border-bottom: 1px solid #ffffff;
+}
+
+
 nav ul li div div
 {
 		
@@ -174,7 +219,7 @@ nav ul li div table div {
 }
 
 nav > ul > li:hover > a {  /* swap ":hover" with ".active" to allow this to work as a class */
-    background-color: #ccc;
+    background-color: rgb(2,69,37);
 }
 nav > ul > li:hover > div { /* swap ":hover" with ".active" to allow this to work as a class */
     left: 0;

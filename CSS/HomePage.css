@@ -1,5 +1,12 @@
 
 <style>
+#s4-ribbonrow
+{
+	height:0px !important;
+}
+#s4-ribboncont {
+display:none;}
+
 #sideNavBox { DISPLAY: none }
 .ms-webpartPage-root {
    border-spacing: 1px; 
