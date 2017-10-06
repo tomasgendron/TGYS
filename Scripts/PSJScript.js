@@ -1,3 +1,5 @@
+// tomas changes oct 6/2017 - removed hardcoded 200px width on td
+
 // this file mainly handles the MegaMenu
 
 var attemptCount = 0;
