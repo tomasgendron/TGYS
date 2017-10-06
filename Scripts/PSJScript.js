@@ -92,7 +92,7 @@ var PSData = window.PSData ||
 				//console.log(allitems.length);
 				if(allitems.length>1 || allitems[0].split("|")[0]!="") // START check for 1 item
 				{
-					totalHtml += "<div> <table > <tr> <td width='200'> <ul>";
+					totalHtml += "<div> <table > <tr> <td class='linkContainer'> <ul>";
 
 					$(allitems).each(function(iii){
 						var menuitem = allitems[iii];

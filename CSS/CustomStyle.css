@@ -28,11 +28,11 @@ display: none;
 
 
 */
-/*#contentRow
+#contentRow
 {
 	
-	background-image: url("/PublishingImages/SitePages/Home/bgdos.jpg");
-} */
+	padding-top:40px;
+} 
 
 #pageTitle {
     display: block;
@@ -58,7 +58,7 @@ div#DeltaSiteLogo
 	
 }
 #s4-bodyContainer > #s4-titlerow {
-
+padding-bottom: 18px !important;
 background-image: url("/SiteAssets/images/CONA_bar2-2.jpg") !important;
 }
 
@@ -117,20 +117,27 @@ display: none;
 	
 /* end home page */
 
-/* top nav div, ul, li, a {margin: 0; padding: 0; border: 0;} */
 
+/* ====================================== */
+/* top nav div, ul, li, a {margin: 0; padding: 0; border: 0;} */
+/* ====================================== */
 body {
     background-color: #fff;
 }
 nav {
-    background-color: #000000;
+    /* background-color: #000000; */
     position: relative;
     width: 100%;
+	margin-top:18px;
+	height:40px;
+	font-size:1.2em;
+	
 }
-nav a, a:hover, a:active
+nav a,nav a:hover,nav a:active,nav a:visited
 {
 color: white;
 text-decoration:none;
+
 }
 
 nav td
@@ -142,23 +149,39 @@ ul {
     list-style: none;
     
 }
+.linkContainer
+{
+	white-space: nowrap;
+	padding-right:20px;
+
+}
+.linkContainer > ul > li
+{
+	max-width: 200px;
+}
 li.mtop {
-    display: inline-block;
+     /* display: inline-block; */
+	 background-color: #000000;
 }
 li.mtop a {
      display: block; 
      padding: 0.25em 1em; 
 }
-nav > ul {
-    margin: 0 auto;
-    width: 1024px;
+li.mtop ul
+{
+    list-style:none;
+    padding-left:0px;
+
 }
+
 nav ul li div { /* nested div (containing the sub nav) will be hidden by default */
     background-color: transparent;
     width: 100%;
     position: absolute;
     left: -9999px;
 	z-index:999999;
+	margin-top:6px;
+
 }
 nav ul li div ul {
     margin: 0 auto;
@@ -167,7 +190,7 @@ nav ul li div ul {
 nav ul li div table {
 	background-color:#000000;
     margin: 0 auto;
-    width: 1024px;
+    width: 900px;
 	border:1px solid #000000;
 	margin-bottom:10px;
 }
@@ -194,13 +217,32 @@ nav ul li div table table {
 }
 nav ul > li:hover
 {
-	background-color: rgb(2,69,37);
+	background-color: rgb(2,69,37); 
+
 }
 nav td > ul > li
 {
 	border-bottom: 1px solid #ffffff;
+	
 }
+nav > ul
+{
+    margin: 0 auto;
+    width: 800px;
 
+	height:100%;
+	display:table;
+
+
+
+}
+nav > ul > li
+{
+	height:100%;
+	border:1px solid white;
+	display:table-cell;
+	vertical-align: middle;
+}
 
 nav ul li div div
 {
@@ -226,9 +268,16 @@ nav > ul > li:hover > div { /* swap ":hover" with ".active" to allow this to wor
 	/* color:green; */
 }	
 nav td{vertical-align:top;}
+/* ====================================== */
 /* end top nav */
+/* ====================================== */
 
+
+/* ====================================== */
 /* rotator  */
+/* ====================================== */
+
+
 
 .PSRotSelected
 {
@@ -242,6 +291,10 @@ nav td{vertical-align:top;}
 
 	padding:7px;
 	background-color:#F1F1E9;
+}
+.PSRotNotSelected > a,.PSRotNotSelected > a,.PSRotNotSelected > a:hover,.PSRotNotSelected > a:active,.PSRotNotSelected > a:visited
+{
+	color:#0072c6;
 }
 
 #rotLeftImage{
@@ -257,6 +310,8 @@ nav td{vertical-align:top;}
 	border: none;
 	
 }
+
+
 
 #rotCentre
 {
@@ -280,4 +335,6 @@ nav td{vertical-align:top;}
 	background-color:#F1F1E9;
 }
 
+/* ====================================== */
 /* end rotator */
+/* ====================================== */
