@@ -16,6 +16,13 @@ background-color:#000000;}
 	color:white !important;
 }
 
+/* To change EDIT LINKS to white */
+
+a[title='Edit Links'][id $= 'TopNavigationMenu_NavMenu_EditLinks'].ms-navedit-editLinksText > span > .ms-metadata,
+a[title='Edit Links'][id $= 'TopNavigationMenu_NavMenu_EditLinks'].ms-navedit-editLinksText:hover > span > .ms-metadata
+{
+  color:white;
+}
 
 .ms-srch-sb {display:none;}
 
@@ -64,11 +71,14 @@ padding-bottom: 18px !important;
 background-image: url("/SiteAssets/images/CONA_bar2-2.jpg") !important;
 }
 
-
 .ms-breadcrumb-top .menu-item-text
 {
 	color:#ffffff;
 	
+}
+
+#PSRightNav{
+	float: left;
 }
 
 /* Home page styles */
@@ -77,7 +87,7 @@ background-image: url("/SiteAssets/images/CONA_bar2-2.jpg") !important;
 {
 	color:#000000;
 	font-family: Arial, Helvetica, sans-serif;
-	border: 1px solid #000000;
+	border: 1px solid #000000;	
 }
 
 div#PSRightNav > div > div

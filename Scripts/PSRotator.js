@@ -1,39 +1,53 @@
 /*
-
-Oct 1st. Tomas and Yogi changes 
-
-
 this code runs against this html from your page
 
-<div id="PSRotator" class='PSRotator'>
-<table><tr><td valign='top' id="rotLeft"><div id="rotLeftImage" style='float:left;'> </div></td>
-<td valign='top' id="rotCentre">
-
-<div style='float:right;'>
-<h2 id='rotLeftTitle'></h2>
-<h3 id='rotLeftSubTitle'></h3>
-<p id='rotLeftContent'></p>
-</div>
-
-</td>
-
-<td valign='top' id="rotRight">
-<table id="rotRightTable" cellspacing="0" cellpadding="0">
-
+<table id="mainWebPartTable">
+	<tr>
+		<td>
+			<div id="PSRotator" class='PSRotator'>
+				<table>
+					<tr>
+						<td valign='top' id="rotLeft">
+							<div id="rotLeftImage" style='float:left;'>
+							</div>
+						</td>
+						<td valign='top' id="rotCentre">
+							<div style='float:right;'>
+								<h2 id='rotLeftTitle'></h2>
+								<h3 id='rotLeftSubTitle'></h3>
+								<p id='rotLeftContent'></p>
+							</div>
+						</td>
+						<td valign='top' id="rotRight">
+							<table id="rotRightTable" cellspacing="0" cellpadding="0">
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+		<td>
+		</td>
+		<td>
+			<div id="PSRightNav">
+				<div class='homePageCategory'>CATEGORY 1</div>
+				<div linkcat="Category 1"></div>
+				<div class='homePageCategory'>CATEGORY 2</div>
+				<div linkcat="Category 2"></div>
+				<div class='homePageCategory'>CATEGORY 3</div>
+				<div linkcat="Category 3"></div>
+			</div>
+		</td>
+	</tr>
 </table>
-</td>
 
-</tr></table>
-</div>
 <script>
-
 function runWhenJQueryLoaded()
 {
-	$.getScript( _spPageContextInfo.siteAbsoluteUrl + "/SiteAssets/js/PSRotator.js" );
-       
+    $.getScript( _spPageContextInfo.siteAbsoluteUrl + "/SiteAssets/js/PSRotator.js" );
+     
 }
 </script>
-
 
 */
 
