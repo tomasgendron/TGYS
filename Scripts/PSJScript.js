@@ -158,7 +158,8 @@ var PSData = window.PSData ||
 
 
 		function getMenuConfig() {
-		    var requestUri = _spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/getByTitle('MenuConfig')/items?$filter=Lang%20eq%20%27en%27&$orderby=Order0";
+			//var requestUri = _spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/getByTitle('MenuConfig')/items?$filter=Lang%20eq%20%27en%27&$orderby=Order0";
+			var requestUri = "https://go.conaresources.com/_api/web/lists/getByTitle('MenuConfig')/items?$filter=Lang%20eq%20%27en%27&$orderby=Order0";
 		    return RunAjax2(requestUri);
 		}
 		
