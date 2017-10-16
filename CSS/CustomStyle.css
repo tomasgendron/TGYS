@@ -1,23 +1,14 @@
-﻿/* tomas changes oct 15/2017  */
+﻿/* tomas changes oct 6/2017 */
 
-.stockttext,  .stockttext:hover,.stockttext:active,.stockttext:visited
-{
-FONT-SIZE: 11pt; 
-PADDING-RIGHT: 5px;
-color:#136e40;
-text-decoration: none;
-}
-.stockcontainer
-{
-	float:right;
-margin-left:70px;
-margin-top:-25px
+/* Added to keep hyperlink's color as green on home page. */
+
+div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHolderMain a:active, div#DeltaPlaceHolderMain a:visited {
+color: green;
 }
 
 .ms-core-navigationXYZ { DISPLAY: none }
 
 /*#sideNavBox { DISPLAY: none } */
-
 
 
 /* this controls the bar with Share follow */

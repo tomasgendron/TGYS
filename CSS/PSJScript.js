@@ -1,5 +1,4 @@
 // tomas changes oct 6/2017 - removed hardcoded 200px width on td
-//tomas oct 15
 
 // this file mainly handles the MegaMenu
 
@@ -41,9 +40,9 @@ function initCode() {
 
     $(document).ready(function() {
 		
-		
+		$(".ms-core-listMenu-item:contains('Recent')").parent().hide();
+
 		PSData.Lib.setupTopNav();
-		PSData.Lib.setupStockSymbol();
 
 
     });
@@ -61,13 +60,6 @@ var PSData = window.PSData ||
 		menuhash = {};
 		menuHTMLhash = {};
 		menuarr=[];
-
-		var setupStockSymbol = function()
-		{
-			$("#titleAreaRow > .ms-breadcrumb-box ").append("<div class='stockcontainer'><DIV style='POSITION: relative; FLOAT: left; TOP: -7px; PADDING-RIGHT: 10px'><A class=stockttext href='http://web.tmxmoney.com/charting.php?qm_symbol=CONA' target=_blank><IMG src='https://go.conaresources.com/SiteAssets/images/tsx.png' border=0></A></DIV><A class=stockttext href='http://web.tmxmoney.com/charting.php?qm_symbol=CONA' target=_blank><STRONG>CONA</STRONG></A></div>");
-
-		}
-
 		var setupTopNav = function()
 		{
 			var p = getMenuConfig();
@@ -178,7 +170,6 @@ var PSData = window.PSData ||
 		RunAjax2: RunAjax2,
 		getMenuConfig: getMenuConfig,
 		setupTopNav: setupTopNav,
-		setupStockSymbol: setupStockSymbol,
 		menuhash: menuhash
   	};
 		
