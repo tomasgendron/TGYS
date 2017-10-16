@@ -1,4 +1,5 @@
 // tomas changes oct 6/2017 - removed hardcoded 200px width on td
+//tomas oct 15
 
 // this file mainly handles the MegaMenu
 
