@@ -42,6 +42,7 @@ function initCode() {
 		
 		
 		PSData.Lib.setupTopNav();
+		PSData.Lib.setupStockSymbol();
 
 
     });
@@ -59,6 +60,13 @@ var PSData = window.PSData ||
 		menuhash = {};
 		menuHTMLhash = {};
 		menuarr=[];
+
+		var setupStockSymbol = function()
+		{
+			$("#titleAreaRow > .ms-breadcrumb-box ").append("<div class='stockcontainer'><DIV style='POSITION: relative; FLOAT: left; TOP: -7px; PADDING-RIGHT: 10px'><A class=stockttext href='http://web.tmxmoney.com/charting.php?qm_symbol=CONA' target=_blank><IMG src='https://go.conaresources.com/SiteAssets/images/tsx.png' border=0></A></DIV><A class=stockttext href='http://web.tmxmoney.com/charting.php?qm_symbol=CONA' target=_blank><STRONG>CONA</STRONG></A></div>");
+
+		}
+
 		var setupTopNav = function()
 		{
 			var p = getMenuConfig();
@@ -94,7 +102,7 @@ var PSData = window.PSData ||
 				//console.log(allitems.length);
 				if(allitems.length>1 || allitems[0].split("|")[0]!="") // START check for 1 item
 				{
-					totalHtml += "<div> <table > <tr> <td class='linkContainer'> <ul>";
+					totalHtml += "<div> <table class='PSoutertable' > <tr> <td class='linkContainer'> <ul>";
 
 					$(allitems).each(function(iii){
 						var menuitem = allitems[iii];
@@ -108,7 +116,7 @@ var PSData = window.PSData ||
 					if(menuHTMLhash[this] != undefined)
 					{
 						itemHTML = "<div class='menuHtmlImage' style='float:left;display:block'><img style='height:125px' src='"+ menuHTMLhash[this][0].split("|")[0] +"' /></div><div class='menuHtmlHeading' style='float:right;display:block'>"+ menuHTMLhash[this][0].split("|")[1] +"</div><div class='menuHtmlContent' style='float:right;display:block'>"+ menuHTMLhash[this][0].split("|")[2] +"</div>";
-						itemHTML = "<div><table><tr><td><img style='height:125px' src='"+ menuHTMLhash[this][0].split("|")[0] +"' /></td><td class='menuHtmlRight'><div class='menuHtmlHeading' style='float:right;display:block'>"+ menuHTMLhash[this][0].split("|")[1] +"</div><div class='menuHtmlContent' style='float:right;display:block'>"+ menuHTMLhash[this][0].split("|")[2] +"</div></td></tr></table></div>";
+						itemHTML = "<div><table class='PSinsidetable'><tr><td><img style='height:125px' src='"+ menuHTMLhash[this][0].split("|")[0] +"' /></td><td class='menuHtmlRight'><div class='menuHtmlHeading' style='float:right;display:block'>"+ menuHTMLhash[this][0].split("|")[1] +"</div><div class='menuHtmlContent' style='float:right;display:block'>"+ menuHTMLhash[this][0].split("|")[2] +"</div></td></tr></table></div>";
 					}
 				
 				//== undefined
@@ -169,6 +177,7 @@ var PSData = window.PSData ||
 		RunAjax2: RunAjax2,
 		getMenuConfig: getMenuConfig,
 		setupTopNav: setupTopNav,
+		setupStockSymbol: setupStockSymbol,
 		menuhash: menuhash
   	};
 		

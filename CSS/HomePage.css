@@ -16,6 +16,7 @@ display:none;}
 .ms-webpart-zone {
     border-collapse: collapse;
 }
-#pageTitle {display:none} 
-div.ms-breadcrumb-top {display:none} 
+ #pageTitle {visibility:hidden}
+ 
+ div.ms-breadcrumb-top {visibility:hidden} 
 </style>

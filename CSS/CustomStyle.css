@@ -1,5 +1,18 @@
-﻿/* tomas changes oct 6/2017 */
+﻿/* tomas changes oct 15/2017 */
 
+.stockttext,  .stockttext:hover,.stockttext:active,.stockttext:visited
+{
+FONT-SIZE: 11pt; 
+PADDING-RIGHT: 5px;
+color:#136e40;
+text-decoration: none;
+}
+.stockcontainer
+{
+	float:right;
+margin-left:70px;
+margin-top:-25px
+}
 
 .ms-core-navigationXYZ { DISPLAY: none }
 
@@ -22,6 +35,10 @@ a[title='Edit Links'][id $= 'TopNavigationMenu_NavMenu_EditLinks'].ms-navedit-ed
 a[title='Edit Links'][id $= 'TopNavigationMenu_NavMenu_EditLinks'].ms-navedit-editLinksText:hover > span > .ms-metadata
 {
   color:white;
+}
+
+#PSRightNav{
+	float: left;
 }
 
 .ms-srch-sb {display:none;}
@@ -82,7 +99,7 @@ background-image: url("/SiteAssets/images/CONA_bar2-2.jpg") !important;
 }
 
 /* Home page styles */
-
+/* Right Left nav */
 .homePageCategory
 {
 	color:#000000;
@@ -94,6 +111,8 @@ div#PSRightNav > div > div
 {
 	border-bottom: 1px solid #777777;
 }
+
+
 
 div#PSMiddleContent{
 background-color:#e9eff1;
@@ -122,6 +141,8 @@ div#PSRightNav div
 { 
 	color: rgb(2,69,37);
 }
+/*End Right Left nav */
+
 
 	.ms-promlink-header {
 display: none;
@@ -157,8 +178,8 @@ nav td
 background-color:#000000;
 }
 
-ul {
-    list-style: none;
+nav ul {
+    list-style: none; 
     
 }
 .linkContainer
@@ -169,7 +190,7 @@ ul {
 }
 .linkContainer > ul > li
 {
-	max-width: 200px;
+	width: 250px;
 }
 li.mtop {
      /* display: inline-block; */
@@ -199,18 +220,31 @@ nav ul li div ul {
     margin: 0 auto;
     /* width: 1024px; */
 }
-nav ul li div table {
+
+/* nav ul li div table */
+
+nav table.PSoutertable {
 	background-color:#000000;
-    margin: 0 auto;
-    width: 900px;
+   /*  margin: 0 auto;  no longer need to slide on resize*/
+   margin-left:200px;
+    width: 800px; 
 	border:1px solid #000000;
 	margin-bottom:10px;
 }
+/*
 nav ul li div table table {
+
+}
+*/
+
+nav table.PSinsidetable
+{
 	background-color:#000000;
 	border:none;
-	width:800px;
+	width:600px;
+
 }
+
 .menuHtmlContent
 {
 
@@ -239,7 +273,8 @@ nav td > ul > li
 }
 nav > ul
 {
-    margin: 0 auto;
+   /*  margin: 0 auto;  no longer need to slide on resize*/
+   margin-left:160px;
     width: 800px;
 
 	height:100%;
