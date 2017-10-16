@@ -1,9 +1,9 @@
 ﻿/* tomas changes oct 6/2017 */
-
+/* Yogi's code is merged with TG's */
 /* Added to keep hyperlink's color as green on home page. */
 
 div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHolderMain a:active, div#DeltaPlaceHolderMain a:visited {
-color: rgb(2,69,37);
+color:green;
 }
 
 /* tomas changes oct 15/2017  */
