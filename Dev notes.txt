@@ -6,3 +6,6 @@ change homepage.css to vis hidden instead of display:none to keep spacing
 
 ---
 creating new list UpcomingEvents to keep track of that list on home page
+
+--Source Control repo issues started at 6:20 PM until 7:05 PM
+--Started working on implementing changes to Site Collection started at 7:45 PM
