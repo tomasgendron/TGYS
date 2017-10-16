@@ -52,9 +52,11 @@ var PS = window.PS ||
 	}
 	var loadRightNav = function()
 	{
-		
+		//_api/web/lists/getByTitle('UpcomingEvents')/items?$orderby=Event%5Fx0020%5FDate
+
+
 		//$("div#PSRightNav").empty();
-		var p = RunAjax(_spPageContextInfo.siteAbsoluteUrl  + "/_api/web/lists/getByTitle('HomepageMenu')/items?$filter=Location eq 'Right'");
+		var p = RunAjax(_spPageContextInfo.siteAbsoluteUrl  + "/_api/web/lists/getByTitle('HomepageMenu')/items?$filter=Location eq 'Right'&$orderby=LinkOrder");
 		p.done(function(data){
 		
 			console.log(data);

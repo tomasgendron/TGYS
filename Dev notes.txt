@@ -3,3 +3,6 @@ working on stock symbol (same as go.northern... to go.cona...). start 5pm.
 
 stock symbol code to be injected on all pages (psjscript.js):
 change homepage.css to vis hidden instead of display:none to keep spacing
+
+---
+creating new list UpcomingEvents to keep track of that list on home page
