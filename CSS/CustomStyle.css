@@ -8,6 +8,33 @@ color:#136e40;
 
 /* tomas changes oct 15/2017  */
 
+/* hide sharepoint logo */
+span.o365cs-nav-brandingText
+{
+	visibility: hidden;
+}
+
+.homelinkContainer
+{
+	border:1px solid black;
+}
+
+.upcomingEventItem
+{
+	color:#024525;
+}
+
+.upcomingEventItem > span.upcomingeventtext
+{
+	display:inline-block;
+	width:170px;
+}
+.upcomingEventItem > span.upcomingeventDate
+{
+	margin-left:15px;
+	display:inline-block;
+}
+
 .stockttext,  .stockttext:hover,.stockttext:active,.stockttext:visited
 {
 FONT-SIZE: 11pt; 
@@ -117,7 +144,7 @@ background-image: url("/SiteAssets/images/CONA_bar2-2.jpg") !important;
 
 div#PSRightNav > div > div
 {
-	border-bottom: 1px solid #777777;
+	border-bottom: 1px solid #dedede;
 }
 
 
@@ -138,7 +165,7 @@ div#PSRightNav div
 {
 	margin-bottom:1px;
 	padding:5px 5px 5px 5px;
-	width: 150px;
+	/*width: 150px;*/
 	}	
 	
 	div#PSLeftNav a,div#PSLeftNav a:hover,div#PSLeftNav a:active,div#PSLeftNav a:visited 

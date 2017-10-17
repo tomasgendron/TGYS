@@ -55,6 +55,7 @@ var PS = window.PS ||
 		//_api/web/lists/getByTitle('UpcomingEvents')/items?$orderby=Event%5Fx0020%5FDate
 
 
+
 		//$("div#PSRightNav").empty();
 		var p = RunAjax(_spPageContextInfo.siteAbsoluteUrl  + "/_api/web/lists/getByTitle('HomepageMenu')/items?$filter=Location eq 'Right'&$orderby=LinkOrder");
 		p.done(function(data){
@@ -62,7 +63,20 @@ var PS = window.PS ||
 			console.log(data);
 			$.each(data.d.results,function(){
 				//$("div#PSRightNav").append("<div style='color:#"+ this.TextColor +";background-color:#"+ this.BgdColor +"'><a href='"+ this.Url +"'>"+ this.Title+"</a></div>")
-				$("div[linkcat='" + this.LinkCategory + "'").append("<div style='color:#"+ this.TextColor +";background-color:#"+ this.BgdColor +"'><a href='"+ this.Url +"'>"+ this.Title+"</a></div>");
+				$("div[linkcat='" + this.LinkCategory + "']").append("<div style='color:#"+ this.TextColor +";background-color:#"+ this.BgdColor +"'><a href='"+ this.Url +"'>"+ this.Title+"</a></div>");
+			});
+		
+		});
+		var today = new Date();
+//ge datetime'" + today.toISOString()
+		var pEvents= RunAjax(_spPageContextInfo.siteAbsoluteUrl  + "/_api/web/lists/getByTitle('UpcomingEvents')/items?$filter=Event%5Fx0020%5FDate ge datetime'" + today.toISOString() +"'&$orderby=Event%5Fx0020%5FDate");
+		pEvents.done(function(data){
+		
+			console.log(data);
+			$.each(data.d.results,function(){
+
+				var myDate = new Date(this.Event_x0020_Date).format("MMM dd yyyy")
+				$("div[linkcat='Upcoming Events']").append("<div class='upcomingEventItem'><span class='upcomingeventtext'>"+ this.Title+ "</span><span class='upcomingeventDate'>" + myDate + "</span></div>");
 			});
 		
 		});
