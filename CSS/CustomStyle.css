@@ -10,6 +10,21 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 	color:rgb(2,105,55);
 	}	
 			
+
+	/* footer */
+
+	#conaFooter
+	{
+		
+    background-image: url(https://go.conaresources.com/SiteAssets/images/CONA_bar_graphic.jpg);
+    background-position-x: 0px;
+    background-position-y: 0px;
+	height:50px;
+	
+
+	}
+
+	/* end footer */		
 	/* left nav */
 	div#DeltaPlaceHolderLeftNavBar span.menu-item-text
 	{
@@ -231,6 +246,7 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 		margin-top:18px;
 		height:40px;
 		font-size:1.2em;
+		background-color:#000000;
 		
 	}
 	nav a,nav a:hover,nav a:active,nav a:visited

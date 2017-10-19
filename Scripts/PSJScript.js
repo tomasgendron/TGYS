@@ -45,7 +45,7 @@ function initCode() {
 
 		PSData.Lib.setupTopNav();
 		PSData.Lib.setupStockSymbol();
-
+		PSData.Lib.setupFooter();
     });
 }
 
@@ -61,6 +61,11 @@ var PSData = window.PSData ||
 		menuhash = {};
 		menuHTMLhash = {};
 		menuarr=[];
+
+		var setupFooter = function()
+		{
+			$("#contentBox").after("<div id='conaFooter'></div>");
+		}
 
 		var setupStockSymbol = function()
 		{
@@ -184,6 +189,7 @@ var PSData = window.PSData ||
 		getMenuConfig: getMenuConfig,
 		setupTopNav: setupTopNav,
 		setupStockSymbol: setupStockSymbol,
+		setupFooter: setupFooter,
 		menuhash: menuhash
   	};
 		
