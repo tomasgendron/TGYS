@@ -18,6 +18,15 @@ if($targetSiteCollection){
 
     # Get Site Collections here
     $sourceWeb = Get-SPWeb $sourceSiteCollection
+
+    #To dectivate MDS feature 
+    If($destinationWeb.EnableMinimalDownload -eq 1)
+    {
+        Write-Host "Minimal Download Strategy is Enabled for this site!";
+        Write-Host "Disabling....";
+        Disable-SPFeature –identity "MDSFeature" -URL $destinationWeb.URL -confirm:$false
+    }   
+
     # Get list objects here
     $sourceList = $sourceWeb.Lists | ? {$_.Title -eq $sourceAssetLibraryTitle}
     # Get Site Collections here

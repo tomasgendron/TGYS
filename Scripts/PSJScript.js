@@ -64,8 +64,12 @@ var PSData = window.PSData ||
 
 		var setupStockSymbol = function()
 		{
+			//$("#DeltaPlaceHolderSearchArea").
 			if($("div.stockcontainer").length == 0)
-				$("#titleAreaRow > .ms-breadcrumb-box ").append("<div class='stockcontainer'><DIV style='POSITION: relative; FLOAT: left; TOP: -7px; PADDING-RIGHT: 10px'><A class=stockttext href='http://web.tmxmoney.com/charting.php?qm_symbol=CONA' target=_blank><IMG src='https://go.conaresources.com/SiteAssets/images/tsx.png' border=0></A></DIV><A class=stockttext href='http://web.tmxmoney.com/charting.php?qm_symbol=CONA' target=_blank><STRONG>CONA</STRONG></A></div>");
+				$("#DeltaPlaceHolderSearchArea").append("<div class='stockcontainer'><DIV style='POSITION: relative; FLOAT: left; TOP: -7px; PADDING-RIGHT: 10px'><A class=stockttext href='http://web.tmxmoney.com/charting.php?qm_symbol=CONA' target=_blank><IMG src='https://go.conaresources.com/SiteAssets/images/tsx.png' border=0></A></DIV><A class=stockttext href='http://web.tmxmoney.com/charting.php?qm_symbol=CONA' target=_blank><STRONG>CONA</STRONG></A></div>");
+				
+				
+				//$("#titleAreaRow > .ms-breadcrumb-box ").append("<div class='stockcontainer'><DIV style='POSITION: relative; FLOAT: left; TOP: -7px; PADDING-RIGHT: 10px'><A class=stockttext href='http://web.tmxmoney.com/charting.php?qm_symbol=CONA' target=_blank><IMG src='https://go.conaresources.com/SiteAssets/images/tsx.png' border=0></A></DIV><A class=stockttext href='http://web.tmxmoney.com/charting.php?qm_symbol=CONA' target=_blank><STRONG>CONA</STRONG></A></div>");
 
 		}
 
