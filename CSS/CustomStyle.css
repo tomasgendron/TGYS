@@ -125,39 +125,16 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 	
 	.ms-srch-sb {display:none;}
 	
-	/* Added by YS for adjustment of SuiteBar and Top margin */
-	/* #RibbonContainer-TabRowRight a[id$=site_share_button] {
-	display: none !important;
-	} */
-
-    #RibbonContainer-TabRowRight { display: none !important;}
-	
-	/* Reset Suite Bar container height */
-	#suiteBarTop {
-		height: 27px !important;
+	#RibbonContainer-TabRowRight a[id$=site_share_button] {
+	display: none;
 	}
-	 
-	/* Change height of all sub components of Suite Bar */
-	#suiteBarDelta .o365cs-nav-header16,
-	#suiteBarDelta .o365cs-nav-o365Branding,
-	#suiteBarDelta .o365cs-nav-button,	
-	#suiteBarDelta .o365cs-me-tile-nophoto,
-	#suiteBarDelta .o365cs-me-tile-nophoto-username-container,
-	#suiteBarDelta .o365cs-me-tile-nophoto-username,
-	#suiteBarDelta .o365cs-me-tile-nophoto-down
-	{
-		height: 27px !important;
-	}
-
-	#suiteBarDelta .o365cs-nav-contextMenu
-	{
-		top: 27px !important;
-	}
-
 	/*#pageTitle {display:none} */
 	/*
 	#DeltaPlaceHolderPageTitleInTitleArea {display:none}
-		
+	
+	
+	
+	
 	*/
 	#contentRow
 	{
