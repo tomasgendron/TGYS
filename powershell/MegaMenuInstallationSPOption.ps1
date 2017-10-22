@@ -9,6 +9,10 @@ Target Site Collection's SiteAssets library\Scripts folder and click on "Auto In
 #>
 
 # Varaibles definitions and user inputs
+Write-Host "If Target Site Collection is not a clean/new site collection, then please delete branding files from 'Site Assets' library of Target Site Collection. This Utility will not override any fileor folder and will display an error if file already exists."
+
+[void](Read-Host 'Press Enter to continue…')
+
 $targetSiteCollection= Read-Host "Please enter Target Site Collection URL, where you want mega menu and branding to be applied (Example: https://go.conaresources.com/teams/Projects)"
 if($targetSiteCollection){
     $sourceSiteCollection = "https://go.conaresources.com"
