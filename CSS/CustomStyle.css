@@ -125,16 +125,39 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 	
 	.ms-srch-sb {display:none;}
 	
-	#RibbonContainer-TabRowRight a[id$=site_share_button] {
-	display: none;
+	/* Added by YS for adjustment of SuiteBar and Top margin */
+	/* #RibbonContainer-TabRowRight a[id$=site_share_button] {
+	display: none !important;
+	} */
+
+    #RibbonContainer-TabRowRight { display: none !important;}
+	
+	/* Reset Suite Bar container height */
+	#suiteBarTop {
+		height: 27px !important;
 	}
+	 
+	/* Change height of all sub components of Suite Bar */
+	#suiteBarDelta .o365cs-nav-header16,
+	#suiteBarDelta .o365cs-nav-o365Branding,
+	#suiteBarDelta .o365cs-nav-button,	
+	#suiteBarDelta .o365cs-me-tile-nophoto,
+	#suiteBarDelta .o365cs-me-tile-nophoto-username-container,
+	#suiteBarDelta .o365cs-me-tile-nophoto-username,
+	#suiteBarDelta .o365cs-me-tile-nophoto-down
+	{
+		height: 27px !important;
+	}
+
+	#suiteBarDelta .o365cs-nav-contextMenu
+	{
+		top: 27px !important;
+	}
+
 	/*#pageTitle {display:none} */
 	/*
 	#DeltaPlaceHolderPageTitleInTitleArea {display:none}
-	
-	
-	
-	
+		
 	*/
 	#contentRow
 	{
@@ -243,8 +266,8 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 		/* background-color: #000000; */
 		position: relative;
 		width: 100%;
-		margin-top:18px;
-		height:40px;
+		margin-top:1px;
+		height:28px;
 		font-size:1.2em;
 		background-color:#000000;
 		
@@ -296,7 +319,7 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 		position: absolute;
 		left: -9999px;
 		z-index:999999;
-		margin-top:6px;
+		margin-top:1px;
 	
 	}
 	nav ul li div ul {
