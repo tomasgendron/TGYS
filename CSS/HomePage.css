@@ -1,4 +1,4 @@
-/* tomas oct 15 */
+
 
 <style>
 #s4-ribbonrow
@@ -20,4 +20,11 @@ display:none;}
  #pageTitle {visibility:hidden}
 
  div.ms-breadcrumb-top {visibility:hidden} 
+
+/* set the distance from left to align with logo */
+table#mainWebPartTable
+{
+    margin-left: 137px;
+}
+
 </style>

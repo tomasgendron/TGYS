@@ -64,7 +64,7 @@ var PSData = window.PSData ||
 
 		var setupFooter = function()
 		{
-			$("#contentBox").after("<div id='conaFooter'></div>");
+			$("#contentBox").after("<div id='conaFooter'><SPAN class=itgfooterCopyright>© Cona Resources Ltd.</SPAN></div>");
 		}
 
 		var setupStockSymbol = function()
