@@ -9,7 +9,7 @@ Target Site Collection's SiteAssets library\Scripts folder and click on "Auto In
 #>
 
 # Varaibles definitions and user inputs
-Write-Host "If Target Site Collection is not a clean/new site collection, then please delete branding files from 'Site Assets' library of Target Site Collection. This Utility will not override any fileor folder and will display an error if file already exists."
+Write-Host "If Target Site Collection is not a clean/new site collection, then please delete branding files from 'Site Assets' library of Target Site Collection. This Utility will not override any file or folder and will display an error if file already exists."
 
 [void](Read-Host 'Press Enter to continue…')
 

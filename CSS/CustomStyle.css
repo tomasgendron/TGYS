@@ -14,23 +14,25 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 
 	/* footer */
 
-	.itgfooterCopyright {
-		vertical-align: middle;
-		color: #ffffff;
-		line-height: 50px;
-		margin-right: 10px;
-		text-align: right;
-		height: 50px;
-		float:right;
-		background-position: 15px 50%;
-		background-repeat: no-repeat;
-		clear: both;
-	}
-	
-	/* remove the padding so footer is at bottom */
-	#s4-bodyContainer {
-	padding-bottom:0px !important;
-	}	
+.itgfooterCopyright {
+    vertical-align: middle;
+    color: #ffffff;
+    line-height: 50px;
+    margin-right: 10px;
+	text-align: right;
+    height: 50px;
+    float:right;
+    background-position: 15px 50%;
+    background-repeat: no-repeat;
+    clear: both;
+}
+
+/* remove the padding so footer is at bottom */
+#s4-bodyContainer {
+padding-bottom:0px !important;
+}
+
+
 	#conaFooter
 	{
 		
@@ -175,7 +177,10 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 	/*#pageTitle {display:none} */
 	/*
 	#DeltaPlaceHolderPageTitleInTitleArea {display:none}
-		
+	
+	
+	
+	
 	*/
 	#contentRow
 	{
