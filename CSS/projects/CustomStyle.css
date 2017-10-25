@@ -1,5 +1,4 @@
-﻿/* tomas changes oct 22/2017 */
-/* line up with logo spike */
+﻿/* tomas changes oct 16/2017 */
 /* Yogi's code is merged with TG's */
 /* Added to keep hyperlink's color as green on home page. */
 
@@ -14,23 +13,6 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 
 	/* footer */
 
-	.itgfooterCopyright {
-		vertical-align: middle;
-		color: #ffffff;
-		line-height: 50px;
-		margin-right: 10px;
-		text-align: right;
-		height: 50px;
-		float:right;
-		background-position: 15px 50%;
-		background-repeat: no-repeat;
-		clear: both;
-	}
-	
-	/* remove the padding so footer is at bottom */
-	#s4-bodyContainer {
-	padding-bottom:0px !important;
-	}	
 	#conaFooter
 	{
 		
@@ -124,6 +106,9 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 	#s4-ribboncont {
 	background-color:#000000;}
 	
+
+
+
 	.ms-core-pageTitle, .ms-core-pageTitle a
 	{
 		color:white !important;
@@ -143,39 +128,42 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 	
 	.ms-srch-sb {display:none;}
 	
-	/* Added by YS for adjustment of SuiteBar and Top margin */
+	/* Added by YS as Per Scott's sms */
 	/* #RibbonContainer-TabRowRight a[id$=site_share_button] {
-	display: none !important;
+		display: none !important;
 	} */
 
-    #RibbonContainer-TabRowRight { display: none !important;}
+	div#RibbonContainer-TabRowRight
+	{
+		display: none !important;
+	}
+
+
+	/* #RibbonContainer-TabRowRight a[id$=fullscreenmodeBtn]
+	{
+		display: none !important;    
+	} */
+
+	div#suiteBarTop.ms-fullWidth 
+	{
+		height: 10px !important;
+		position: relative !important;
+	}
+
+
+	/*#RibbonContainer-TabRowRight a[id$=site_share_button]
+	{
+		display: none;
+	} */
+
 	
-	/* Reset Suite Bar container height */
-	#suiteBarTop {
-		height: 27px !important;
-	}
-	 
-	/* Change height of all sub components in Suite Bar */
-	#suiteBarDelta .o365cs-nav-header16,
-	#suiteBarDelta .o365cs-nav-o365Branding,
-	#suiteBarDelta .o365cs-nav-button,	
-	#suiteBarDelta .o365cs-me-tile-nophoto,
-	#suiteBarDelta .o365cs-me-tile-nophoto-username-container,
-	#suiteBarDelta .o365cs-me-tile-nophoto-username,
-	#suiteBarDelta .o365cs-me-tile-nophoto-down
-	{
-		height: 27px !important;
-	}
-
-	#suiteBarDelta .o365cs-nav-contextMenu
-	{
-		top: 27px !important;
-	}
-
 	/*#pageTitle {display:none} */
 	/*
 	#DeltaPlaceHolderPageTitleInTitleArea {display:none}
-		
+	
+	
+	
+	
 	*/
 	#contentRow
 	{
@@ -398,7 +386,7 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 	nav > ul
 	{
 	   /*  margin: 0 auto;  no longer need to slide on resize*/
-	   margin-left:100px;
+	   margin-left:160px;
 		width: 800px;
 	
 		height:100%;
