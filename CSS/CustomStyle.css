@@ -45,7 +45,7 @@ padding-bottom:0px !important;
 	}
 
 	/* end footer */		
-	/* left nav */
+
 	div#DeltaPlaceHolderLeftNavBar span.menu-item-text
 	{
 	
@@ -72,7 +72,7 @@ padding-bottom:0px !important;
 	text-decoration: underline;
 	}
 	
-	/* end left nav */
+
 	
 	/* hide sharepoint logo */
 	span.o365cs-nav-brandingText
@@ -139,10 +139,7 @@ padding-bottom:0px !important;
 	  color:white;
 	}
 	
-	#PSRightNav{
-		float: left;
-	}
-	
+
 	.ms-srch-sb {display:none;}
 	
 	/* Added by YS for adjustment of SuiteBar and Top margin */
@@ -222,69 +219,17 @@ padding-bottom:0px !important;
 		
 	}
 	
-	#PSRightNav{
-		float: left;
-	}
+
 	
-	/* Home page styles */
-	/* Right Left nav */
-	.homePageCategory
-	{
-		color:#000000;
-		font-family: Arial, Helvetica, sans-serif;
-		border: 1px solid #000000;	
-	}
-	
-	div#PSRightNav > div > div
-	{
-		border-bottom: 1px solid #dedede;
-	}
-	
-	
-	
-	div#PSMiddleContent{
-	background-color:#e9eff1;
-	width:70%;
-	}
-	
-	div#PSLeftNav div
-	{
-		margin-bottom:10px;
-		padding:5px 5px 5px 5px;
-		width: 100px;
-		}
-		
-	div#PSRightNav div
-	{
-		margin-bottom:1px;
-		padding:5px 5px 5px 5px;
-		/*width: 150px;*/
-		}	
-		
-		div#PSLeftNav a,div#PSLeftNav a:hover,div#PSLeftNav a:active,div#PSLeftNav a:visited 
-	{ 
-		color: rgb(2,69,37)
-	}
-		div#PSRightNav a,div#PSRightNav a:hover,div#PSRightNav a:active,div#PSRightNav a:visited 
-	{ 
-		color: rgb(2,69,37);
-	}
-	/*End Right Left nav */
-	
-	
-		.ms-promlink-header {
-	display: none;
-	}
-		
-	/* end home page */
-	
-	
-	/* ====================================== */
-	/* top nav div, ul, li, a {margin: 0; padding: 0; border: 0;} */
-	/* ====================================== */
 	body {
 		background-color: #fff;
 	}
+	
+	
+	/* ====================================== */
+	/* MEGAMENU  */
+	/* ====================================== */
+
 	nav {
 		/* background-color: #000000; */
 		position: relative;
@@ -336,7 +281,9 @@ padding-bottom:0px !important;
 	
 	}
 	
-	nav ul li div { /* nested div (containing the sub nav) will be hidden by default */
+
+	/* fix */
+	nav  ul  li  div { /* nested div (containing the sub nav) will be hidden by default */
 		background-color: transparent;
 		width: 100%;
 		position: absolute;
@@ -345,7 +292,9 @@ padding-bottom:0px !important;
 		margin-top:1px;
 	
 	}
-	nav ul li div ul {
+
+	/* fix */
+	nav  ul  li  div  ul {
 		margin: 0 auto;
 		/* width: 1024px; */
 	}
@@ -400,10 +349,13 @@ padding-bottom:0px !important;
 		border-bottom: 1px solid #ffffff;
 		
 	}
+
+
+	/* the margin-left here controls how far the first megamenu tab is from the left for all pages except landing page */
 	nav > ul
 	{
 	   /*  margin: 0 auto;  no longer need to slide on resize*/
-	   margin-left:100px;
+	   margin-left:160px;
 		width: 800px;
 	
 		height:100%;
@@ -420,7 +372,8 @@ padding-bottom:0px !important;
 		vertical-align: middle;
 	}
 	
-	nav ul li div div
+	/* fix */
+	nav  ul  li  div  div
 	{
 			
 		left:0px;
@@ -429,7 +382,8 @@ padding-bottom:0px !important;
 		
 	}
 	
-	nav ul li div table div {
+	/* fix */
+	nav  ul  li  div  table  div {
 		
 		left:0px;
 		position:relative;
@@ -445,7 +399,7 @@ padding-bottom:0px !important;
 	}	
 	nav td{vertical-align:top;}
 	/* ====================================== */
-	/* end top nav */
+	/* end MEGAMENU top nav */
 	/* ====================================== */
 	
 	
