@@ -40,9 +40,11 @@ table#mainWebPartTable
 	{
 		vertical-align: top;
 	}
+
+	/* this is the white space between upcoming events and quick links */
 	div#homepagecatQL
 	{
-		margin-top:66px;
+		margin-top:0px;
 	}
 	.homePageCategory
 	{

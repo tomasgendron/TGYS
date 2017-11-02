@@ -8,6 +8,7 @@ var PS = window.PS ||
   {
 	var attemptCount = 0;
     var subhash = {}; // by vendor
+	var _numberOfUpcomingEventsToDisplay=7;
 	
 	var RunAjax = function(restUrl) {
   		//var nocache = new Date().getTime();
@@ -69,13 +70,15 @@ var PS = window.PS ||
 		});
 		var today = new Date();
 //ge datetime'" + today.toISOString()
-		var pEvents= RunAjax(_spPageContextInfo.siteAbsoluteUrl  + "/_api/web/lists/getByTitle('UpcomingEvents')/items?$filter=Event%5Fx0020%5FDate ge datetime'" + today.toISOString() +"'&$orderby=Event%5Fx0020%5FDate");
+		
+		var pEvents= RunAjax(_spPageContextInfo.siteAbsoluteUrl  + "/teams/Company/_api/web/lists/getByTitle('Calendar')/items?$top="+_numberOfUpcomingEventsToDisplay+"&$filter=EventDate ge datetime'" + today.toISOString() +"'&$orderby=EventDate");
+		//var pEvents= RunAjax(_spPageContextInfo.siteAbsoluteUrl  + "/_api/web/lists/getByTitle('UpcomingEvents')/items?$filter=Event%5Fx0020%5FDate ge datetime'" + today.toISOString() +"'&$orderby=Event%5Fx0020%5FDate");
 		pEvents.done(function(data){
 		
 			console.log(data);
 			$.each(data.d.results,function(){
 
-				var myDate = new Date(this.Event_x0020_Date).format("MMM dd yyyy")
+				var myDate = new Date(this.EventDate).format("MMM dd yyyy")
 				$("div[linkcat='Upcoming Events']").append("<div class='upcomingEventItem'><span class='upcomingeventtext'>"+ this.Title+ "</span><span class='upcomingeventDate'>" + myDate + "</span></div>");
 			});
 		
