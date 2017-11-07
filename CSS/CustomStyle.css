@@ -3,6 +3,13 @@
 /* Yogi's code is merged with TG's */
 /* Added to keep hyperlink's color as green on home page. */
 
+
+#contentBox
+{
+	min-height:450px !important; 
+/*	float:none !important; */
+}
+
 div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHolderMain a:active, div#DeltaPlaceHolderMain a:visited {
 	color:rgb(2,105,55);
 	}
