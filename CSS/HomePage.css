@@ -27,4 +27,82 @@ table#mainWebPartTable
     margin-left: 137px;
 }
 
+/* styles from customstyles */
+
+	#PSRightNav{
+		float: left;
+	}
+
+/* Home page styles */
+	/* Right Left nav */
+
+	table#mainWebPartTable > tbody > tr > td
+	{
+		vertical-align: top;
+	}
+
+	/* this is the white space between upcoming events and quick links */
+	div#homepagecatQL
+	{
+		margin-top:0px;
+	}
+	.homePageCategory
+	{
+		color:#000000;
+		font-family: Arial, Helvetica, sans-serif;
+		border: 1px solid #000000;	
+	}
+	
+	div#PSRightNav > div > div
+	{
+		border-bottom: 1px solid #dedede;
+	}
+	
+	
+	
+	div#PSMiddleContent{
+	background-color:#e9eff1;
+	width:70%;
+	}
+	
+	div#PSLeftNav div
+	{
+		margin-bottom:10px;
+		padding:5px 5px 5px 5px;
+		width: 100px;
+		}
+		
+	div#PSRightNav div
+	{
+		margin-bottom:1px;
+		padding:5px 5px 5px 5px;
+		/*width: 150px;*/
+		}	
+		
+		div#PSLeftNav a,div#PSLeftNav a:hover,div#PSLeftNav a:active,div#PSLeftNav a:visited 
+	{ 
+		color: rgb(2,69,37)
+	}
+		div#PSRightNav a,div#PSRightNav a:hover,div#PSRightNav a:active,div#PSRightNav a:visited 
+	{ 
+		color: rgb(2,69,37);
+	}
+	/*End Right Left nav */
+	
+	
+		.ms-promlink-header {
+	display: none;
+	}
+		
+	/* end home page */	    
+
+    /* MEGA MENU FOR HOME PAGE ONLY */
+    /* the margin-left here controls how far the first megamenu tab is from the left */
+	nav > ul
+	{
+
+	   margin-left:100px !important;
+
+	}
+
 </style>

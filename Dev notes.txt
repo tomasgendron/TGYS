@@ -11,3 +11,13 @@ creating new list UpcomingEvents to keep track of that list on home page
 --Started working on implementing changes to Site Collection started at 7:45 PM
 
 --Added MDS Feature disabling code started @ 9:15 PM
+
+Tomas Oct 26
+- change megamenu to left-margin 160 for all but landing page
+
+
+GIT commands
+git pull origin master
+git add -A
+git commit -m "message"
+git push origin master
