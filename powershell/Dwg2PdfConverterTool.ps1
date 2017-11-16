@@ -21,7 +21,7 @@ function Write-SPLog {
     .PARAMETER logTitle
     The Log Title to query. Just one.
     .PARAMETER logDescription
-    The name of a file to write failed computer names to. Defaults to errors.txt.
+    The description to log, it can be multiple lines.
     #>
     [CmdletBinding(SupportsShouldProcess=$True, ConfirmImpact='Low')]
     param
