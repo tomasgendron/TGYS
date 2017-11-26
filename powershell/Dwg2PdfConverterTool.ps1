@@ -156,8 +156,9 @@ if ($configList) {
             #Add file
             #$folder = $SPWeb.getfolder($docLibrary.RootFolder.Name + "/" + $subFolderName) ##Changed code here to get subfolder
             $folder = $SPWeb.getfolder($targetdocLibrary.RootFolder.Name) ##Changed code here to get subfolder
-            $spFile = $folder.Files.Add($folder.Url + "/" + $_.Name, $contents, $true)
-            $spItem = $spFile.Item
+            $folder.Files.Add($folder.Url + "/" + $_.Name, $contents, $true)
+            #$spFile = $folder.Files.Add($folder.Url + "/" + $_.Name, $contents, $true)
+            #$spItem = $spFile.Item
             Write-SPLog $SPWeb $auditLogListName "10" "The converted File ($conFileName) is uploaded to SharePoint document library: $targetdocLibrary" "The converted File ($conFileName) is uploaded to SharePoint document library: $targetdocLibrary!"
             Write-Host -f Green "Uploaded processed drwaing file" $_.FullName " to library !!!"
         }
@@ -171,7 +172,8 @@ if ($configList) {
     else{
         $count=$docfiles.Count
         $mesg="Either $docLibraryName does not have any new records to process or SharePoint file counts does not match with Downloaded file counts ( Sharepoint File Count:$count, Copied items in [$localUnProcessedDrawingFilesFolderPath] : $sourceCount )!"
-        Write-SPLog $SPWeb $auditLogListName "13" "No records to process" $mesg
+        # Write-SPLog $SPWeb $auditLogListName "13" "No records to process" $mesg
+        Write-Host -f yellow "No records to process" $mesg
     }
     $SPWeb.Dispose()
    
