@@ -54,7 +54,7 @@ function Write-SPLog {
   }
 
 #Call the Web Service here
-$SPWeb = Get-SPWeb "https://go.conaresources.com/sites/pa"
+$SPWeb = Get-SPWeb "https://go.conaresources.com/sites/dms"
 
 $configList = $SPWeb.Lists["Config"]
 if ($configList) {
@@ -172,13 +172,13 @@ if ($configList) {
     else{
         $count=$docfiles.Count
         $mesg="Either $docLibraryName does not have any new records to process or SharePoint file counts does not match with Downloaded file counts ( Sharepoint File Count:$count, Copied items in [$localUnProcessedDrawingFilesFolderPath] : $sourceCount )!"
-        # Write-SPLog $SPWeb $auditLogListName "13" "No records to process" $mesg
+        #Write-SPLog $SPWeb $auditLogListName "13" "No records to process" $mesg
         Write-Host -f yellow "No records to process" $mesg
     }
     $SPWeb.Dispose()
    
 }
 else {    
-    Write-Host "Either config list does not exist and configuration data is not configured!"
+    Write-Host "Either config list does not exist and configuration data is not configured!"    
 }
 
