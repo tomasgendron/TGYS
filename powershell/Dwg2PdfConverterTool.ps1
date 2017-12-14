@@ -98,7 +98,7 @@ if ($configList) {
     #$docLibraryName = "Drawing Files Drop Off Library"
     $list = $SPWeb.Lists[$docLibraryName]
 
-    $docfiles = $list.Items | Where-Object {$_["Processed"] -like "False"}
+    $docfiles = $list.Items | Where-Object {$_["Processed"] -like "False" -and $_.Name.ToString().ToUpper().Contains(".DWG")}
 
     foreach ($docfile in $docfiles) {
 
@@ -113,21 +113,18 @@ if ($configList) {
         $docgen.Close() 
         $fileName=$docfile.Name
         Write-SPLog $SPWeb $auditLogListName "7" "File ($fileName) is downloaded::$localUnProcessedDrawingFilesFolderPath" "The File ($fileName) is successfully downloaded to $localUnProcessedDrawingFilesFolderPath!"
-        Write-host "Download Completed for" $docfile.Name
-
-        #Powershell updates meta data for copied drwaning file so that they are not processed again
-        $docfile.Properties["Processed"] = "True"
-        $docfile.Update()
-        Write-SPLog $SPWeb $auditLogListName "8" "File ($fileName)'s metadata is updated" "The File ($fileName)'s metadata is updated successfully in SharePoint Library: $docLibraryName"
-        Write-host "File's metadata is updated successfully: " $docfile.Name
+        Write-host "Download Completed for" $docfile.Name       
     }
 
     $sourceCount = (Get-ChildItem $localUnProcessedDrawingFilesFolderPath | Measure-Object ).Count
 
+    $recordCounts=$docfiles.Count
 
-    write-host "Sharepoint Count:" $docfiles.Count "Copied items: " $sourceCount
+    write-host "Sharepoint Count:" $recordCounts "Copied items: " $sourceCount
 
-    if ($docfiles.Count -eq $sourceCount -and $sourceCount -gt 0) {
+    Write-SPLog $SPWeb $auditLogListName "14" "Sharepoint Count: $recordCounts" "Copied items: $sourceCount"
+
+    if ($recordCounts -eq $sourceCount -and $sourceCount -gt 0) {
         #Powershell initiates the DWG to PDF converter via command line with the appropriate parameters and DWG to PDF converts all files in the Temp Input folder and copies them to the Temp Output folder
 
         $myarg = '/InFolder' + $localUnProcessedDrawingFilesFolderPath + ' /OutFolder' + $localProcessedDrawingFilesFolderPath + ' /ConvertType DWG2PDF' + ' /IncSubFolder'
@@ -162,6 +159,15 @@ if ($configList) {
             Write-SPLog $SPWeb $auditLogListName "10" "The converted File ($conFileName) is uploaded to SharePoint document library: $targetdocLibrary" "The converted File ($conFileName) is uploaded to SharePoint document library: $targetdocLibrary!"
             Write-Host -f Green "Uploaded processed drwaing file" $_.FullName " to library !!!"
         }
+        
+        foreach ($docfile in $docfiles) {
+            #Powershell updates meta data for copied drwaning file so that they are not processed again
+            $docfile.Properties["Processed"] = "True"
+            $docfile.Update()
+            Write-SPLog $SPWeb $auditLogListName "8" "File ($fileName)'s metadata is updated" "The File ($fileName)'s metadata is updated successfully in SharePoint Library: $docLibraryName"
+            Write-host "File's metadata is updated successfully: " $docfile.Name
+        }
+
          # Powershell deletes all files from the Temp Output folder
         Remove-Item $localUnProcessedDrawingFilesFolderPath\* -recurse
         Write-SPLog $SPWeb $auditLogListName "11" "Deleted files from : $localUnProcessedDrawingFilesFolderPath" "All files are deleted files from : $localUnProcessedDrawingFilesFolderPath!"
@@ -170,8 +176,8 @@ if ($configList) {
         Write-Host -f yellow "The folders [" $localUnProcessedDrawingFilesFolderPath "," $localProcessedDrawingFilesFolderPath "] are reset !!!"
     }
     else{
-        $count=$docfiles.Count
-        $mesg="Either $docLibraryName does not have any new records to process or SharePoint file counts does not match with Downloaded file counts ( Sharepoint File Count:$count, Copied items in [$localUnProcessedDrawingFilesFolderPath] : $sourceCount )!"
+        
+        $mesg="Either $docLibraryName does not have any new records to process or SharePoint file counts does not match with Downloaded file counts ( Sharepoint File Count:$recordCounts, Copied items in [$localUnProcessedDrawingFilesFolderPath] : $sourceCount )!"
         #Write-SPLog $SPWeb $auditLogListName "13" "No records to process" $mesg
         Write-Host -f yellow "No records to process" $mesg
     }
