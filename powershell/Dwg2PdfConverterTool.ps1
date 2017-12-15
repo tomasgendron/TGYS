@@ -121,12 +121,11 @@ if ($configList) {
     $recordCounts=$docfiles.Count
 
     write-host "Sharepoint Count:" $recordCounts "Copied items: " $sourceCount
-
-    Write-SPLog $SPWeb $auditLogListName "14" "Sharepoint Count: $recordCounts" "Copied items: $sourceCount"
-
+    
     if ($recordCounts -eq $sourceCount -and $sourceCount -gt 0) {
         #Powershell initiates the DWG to PDF converter via command line with the appropriate parameters and DWG to PDF converts all files in the Temp Input folder and copies them to the Temp Output folder
-
+        Write-SPLog $SPWeb $auditLogListName "14" "Sharepoint Count: $recordCounts" "Copied items: $sourceCount"
+        
         $myarg = '/InFolder' + $localUnProcessedDrawingFilesFolderPath + ' /OutFolder' + $localProcessedDrawingFilesFolderPath + ' /ConvertType DWG2PDF' + ' /IncSubFolder'
 
         Start-Process -FilePath $block -ArgumentList $myarg -Wait -NoNewWindow
