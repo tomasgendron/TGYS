@@ -98,27 +98,49 @@ if ($configList) {
     #$docLibraryName = "Drawing Files Drop Off Library"
     $list = $SPWeb.Lists[$docLibraryName]
 
-    $docfiles = $list.Items | Where-Object {$_["Processed"] -like "False" -and $_.Name.ToString().ToUpper().Contains(".DWG")}
+    $drawingFiles = $list.Items | Where-Object {$_["Processed"] -like "False" -and $_.Name.ToString().ToUpper().Contains(".DWG")}
+    $excelFiles = $list.Items | Where-Object {$_["Processed"] -like "False" -and $_.Name.ToString().ToUpper().Contains(".XLS")}    
+    $targetdocLibrary = $SPWeb.Lists[$targetdocLibraryName] 
 
-    foreach ($docfile in $docfiles) {
+    foreach ($excelFile in $excelFiles) {
+        $excelFileName=$excelFile.Name;
+        #Excel files would be copied over directly
+        $bStream = $SPWeb.GetFile($excelFile.Url).OpenBinary()
+        write-host "Copying" $excelFileName "to" $targetdocLibrary.Title "in" $SPWeb.Title "..." 
+
+        $excelfolder = $SPWeb.getfolder($targetdocLibrary.RootFolder.Name) ##Changed code here to get subfolder
+        $excelfolder.Files.Add($excelfolder.Url + "/" + $excelFileName, $bStream, $true)
+        
+        Write-SPLog $SPWeb $auditLogListName "15" "Excel File ($excelFileName) is copied to SharePoint document library: $targetdocLibrary" "The excel File ($excelFileName) is copied to SharePoint document library: $targetdocLibrary!"
+        Write-Host -f Green "Copied excel file" $excelFileName " to library !!!"
+
+        #Powershell updates meta data for copied drwaning file so that they are not processed again
+        $excelFile.Properties["Processed"] = "True"
+        $excelFile.Update()
+        Write-SPLog $SPWeb $auditLogListName "16" "Excel File ($excelFileName)'s metadata is updated" "The File ($excelFileName)'s metadata is updated successfully in SharePoint Library: $docLibraryName"
+        Write-host "Excel File's metadata is updated successfully: " $excelFileName
+    }
+
+   
+    foreach ($drawingFile in $drawingFiles) {
 
         #Download each file here
         #Powershell identifies any drawing files in DMS to be converted (via metadata) and copies them to the Temp Input folder on the server
-        $bin = $SPWeb.GetFile($docfile.Url).OpenBinary()
-        #Write-Host $docfile["Processed"]
+        $bin = $SPWeb.GetFile($drawingFile.Url).OpenBinary()
+        #Write-Host $drawingFile["Processed"]
 
-        $opendoc = New-Object System.IO.FileStream($localUnProcessedDrawingFilesFolderPath + $docfile.Name), create
+        $opendoc = New-Object System.IO.FileStream($localUnProcessedDrawingFilesFolderPath + $drawingFile.Name), create
         $docgen = New-Object System.IO.BinaryWriter($opendoc)
         $docgen.Write($bin)
         $docgen.Close() 
-        $fileName=$docfile.Name
+        $fileName=$drawingFile.Name
         Write-SPLog $SPWeb $auditLogListName "7" "File ($fileName) is downloaded::$localUnProcessedDrawingFilesFolderPath" "The File ($fileName) is successfully downloaded to $localUnProcessedDrawingFilesFolderPath!"
-        Write-host "Download Completed for" $docfile.Name       
+        Write-host "Download Completed for" $drawingFile.Name       
     }
 
     $sourceCount = (Get-ChildItem $localUnProcessedDrawingFilesFolderPath | Measure-Object ).Count
 
-    $recordCounts=$docfiles.Count
+    $recordCounts=$drawingFiles.Count
 
     write-host "Sharepoint Count:" $recordCounts "Copied items: " $sourceCount
     
@@ -135,7 +157,7 @@ if ($configList) {
 
         #Open web and library
         #$subFolderName = "ProcessedDesignFiles" 
-        $targetdocLibrary = $SPWeb.Lists[$targetdocLibraryName] 
+        
         #Attach to local folder and enumerate through all files
         $files = ([System.IO.DirectoryInfo] (Get-Item $localProcessedDrawingFilesFolderPath)).GetFiles() | ForEach-Object { 
 
@@ -159,12 +181,12 @@ if ($configList) {
             Write-Host -f Green "Uploaded processed drwaing file" $_.FullName " to library !!!"
         }
         
-        foreach ($docfile in $docfiles) {
+        foreach ($drawingFile in $drawingFiles) {
             #Powershell updates meta data for copied drwaning file so that they are not processed again
-            $docfile.Properties["Processed"] = "True"
-            $docfile.Update()
+            $drawingFile.Properties["Processed"] = "True"
+            $drawingFile.Update()
             Write-SPLog $SPWeb $auditLogListName "8" "File ($fileName)'s metadata is updated" "The File ($fileName)'s metadata is updated successfully in SharePoint Library: $docLibraryName"
-            Write-host "File's metadata is updated successfully: " $docfile.Name
+            Write-host "File's metadata is updated successfully: " $drawingFile.Name
         }
 
          # Powershell deletes all files from the Temp Output folder
