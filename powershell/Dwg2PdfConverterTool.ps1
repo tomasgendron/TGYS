@@ -149,8 +149,12 @@ if ($configList) {
         Write-SPLog $SPWeb $auditLogListName "14" "Sharepoint Count: $recordCounts" "Copied items: $sourceCount"
         
         $myarg = '/InFolder' + $localUnProcessedDrawingFilesFolderPath + ' /OutFolder' + $localProcessedDrawingFilesFolderPath + ' /ConvertType DWG2PDF' + ' /IncSubFolder'
+        
+        #Try executing synchronously
+        $proc = Start-Process -FilePath $block -ArgumentList $myarg -Wait -NoNewWindow
 
-        Start-Process -FilePath $block -ArgumentList $myarg -Wait -NoNewWindow
+        #Wait for thread to complete execution
+        $proc.WaitForExit()
 
         Write-SPLog $SPWeb $auditLogListName "9" "Folder ($localUnProcessedDrawingFilesFolderPath)'s files are converted" "Folder ($localUnProcessedDrawingFilesFolderPath)'s files are converted!"
         # Move processed files back to SharePoint and a backup on drive
