@@ -78,8 +78,10 @@ var PS = window.PS ||
 			console.log(data);
 			$.each(data.d.results,function(){
 
-				var myDate = new Date(this.EventDate).format("MMM dd yyyy")
-				$("div[linkcat='Upcoming Events']").append("<div class='upcomingEventItem'><span class='upcomingeventtext'>"+ this.Title+ "</span><span class='upcomingeventDate'>" + myDate + "</span></div>");
+				var myDate = new Date(this.EventDate);
+				myDate.setHours(myDate.getHours()+7);
+				var myDate2 = myDate.format("MMM dd yyyy");
+				$("div[linkcat='Upcoming Events']").append("<div class='upcomingEventItem'><span class='upcomingeventtext'>"+ this.Title+ "</span><span class='upcomingeventDate'>" + myDate2 + "</span></div>");
 			});
 		
 		});

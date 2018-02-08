@@ -3,6 +3,9 @@
 /* Yogi's code is merged with TG's */
 /* Added to keep hyperlink's color as green on home page. */
 
+/* hide app launcher */
+#O365_MainLink_NavMenu{display:none;}
+
 
 #contentBox
 {
@@ -295,9 +298,16 @@ padding-bottom:0px !important;
 		width: 100%;
 		position: absolute;
 		left: -9999px;
+
 		z-index:999999;
 		margin-top:1px;
 	
+		-webkit-transition-delay:0.5s;     
+        -moz-transition-delay:0.5s; 
+        -ms-transition-delay:0.5s;     
+        -o-transition-delay:0.5s;     
+		transition-delay:0.5s;  
+
 	}
 
 	/* fix */
@@ -400,9 +410,14 @@ padding-bottom:0px !important;
 	nav > ul > li:hover > a {  /* swap ":hover" with ".active" to allow this to work as a class */
 		background-color: rgb(2,69,37);
 	}
+
+	/* this is the part that shows the sub menu! */
 	nav > ul > li:hover > div { /* swap ":hover" with ".active" to allow this to work as a class */
 		left: 0;
+     
 		/* color:green; */
+ 
+		         		
 	}	
 	nav td{vertical-align:top;}
 	/* ====================================== */
