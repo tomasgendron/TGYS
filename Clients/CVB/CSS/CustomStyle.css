@@ -1,0 +1,349 @@
+﻿
+.ms-core-navigationXYZ { DISPLAY: none }
+#contentBoxXYZ { margin-left: 0px;background-color:#d0d0d0 }
+/*#sideNavBox { DISPLAY: none } */
+
+#s4-ribboncont {
+background-color:#042862;}
+
+
+
+
+.ms-srch-sb {display:none;}
+
+#RibbonContainer-TabRowRight a[id$=site_share_button] {
+display: none;
+}
+/*#pageTitle {display:none} */
+/*
+#DeltaPlaceHolderPageTitleInTitleArea {display:none}
+
+
+
+
+*/
+/*#contentRow
+{
+	
+	background-image: url("/PublishingImages/SitePages/Home/bgdos.jpg");
+} */
+
+#pageTitle {
+    display: block;
+	font-weight: bold;
+    font-size: 1.2em;
+    white-space: nowrap;
+    margin-left: 450px;
+}
+
+.ms-breadcrumb-top
+{
+	margin-left: 450px;
+}
+
+#suiteBarTop 
+{
+background-color:#042862;
+
+}
+div#DeltaSiteLogo
+{
+	display:block;
+	
+}
+#s4-bodyContainer > #s4-titlerow {
+
+background-image: url("/sites/CBV/siteassets/images/banner.png") !important;
+}
+
+
+.ms-breadcrumb-top .menu-item-text
+{
+	color:#ffffff;
+	
+}
+
+/* Home page styles */
+
+.homePageCategory
+{
+color:#808080;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div#PSMiddleContent{
+background-color:#e9eff1;
+width:70%;
+}
+
+div#PSLeftNav div
+{
+	margin-bottom:10px;
+	padding:5px 5px 5px 5px;
+	width: 100px;
+	}
+	
+div#PSRightNav div
+{
+	margin-bottom:1px;
+	padding:5px 5px 5px 5px;
+	width: 150px;
+	}	
+	
+	div#PSLeftNav a,div#PSLeftNav a:hover,div#PSLeftNav a:active,div#PSLeftNav a:visited { color: white; }
+	div#PSRightNav a,div#PSRightNav a:hover,div#PSRightNav a:active,div#PSRightNav a:visited { color: white; }
+
+	.ms-promlink-header {
+display: none;
+}
+	
+/* end home page */
+
+/* top nav div, ul, li, a {margin: 0; padding: 0; border: 0;} */
+
+body {
+    background-color: #fff;
+}
+
+
+	
+	/* ====================================== */
+	/* MEGAMENU  */
+	/* ====================================== */
+
+nav {
+    background-color: #ede9d7;
+    position: relative;
+	width: 100%;
+	margin-top:1px;
+	height:28px;
+	
+}
+nav a,nav a:hover,nav a:active,nav a:visited
+	{
+	
+	text-decoration:none;
+	
+	}
+	
+	nav td
+	{
+	background-color: #ffffff;
+	}
+	
+	nav ul {
+		list-style: none; 
+		
+	}
+	.linkContainer
+	{
+		white-space: nowrap;
+		padding-right:20px;
+	
+	}
+	.linkContainer > ul > li
+	{
+		width: 250px;
+	}
+	li.mtop {
+		 /* display: inline-block; */
+		 background-color: #ede9d7;
+	}
+	li.mtop a {
+		 display: block; 
+		 padding: 0.25em 1em; 
+	}
+	li.mtop ul
+	{
+		list-style:none;
+		padding-left:0px;
+	
+	}
+	
+
+	/* fix */
+	nav  ul  li  div { /* nested div (containing the sub nav) will be hidden by default */
+		background-color: transparent;
+		width: 100%;
+		position: absolute;
+		left: -9999px;
+
+		z-index:999999;
+		margin-top:1px;
+	
+		-webkit-transition-delay:0.5s;     
+        -moz-transition-delay:0.5s; 
+        -ms-transition-delay:0.5s;     
+        -o-transition-delay:0.5s;     
+		transition-delay:0.5s;  
+
+	}
+
+	/* fix */
+	nav  ul  li  div  ul {
+		margin: 0 auto;
+		/* width: 1024px; */
+	}
+	
+	/* nav ul li div table */
+	
+	nav table.PSoutertable {
+		background-color:#ffffff;
+	   /*  margin: 0 auto;  no longer need to slide on resize*/
+	   margin-left:200px;
+		width: 800px; 
+		border:1px solid #ede9d7;
+		margin-bottom:10px;
+	}
+	/*
+	nav ul li div table table {
+	
+	}
+	*/
+	
+	nav table.PSinsidetable
+	{
+		background-color:#ffffff;
+		border:none;
+		width:600px;
+	
+	}
+	
+	.menuHtmlContent
+	{
+	
+	/*	color:#ffffff; */
+	}
+	.menuHtmlHeading
+	{
+		font-weight:bold;
+	/*	color:#ffffff; */
+	}
+	.menuHtmlRight
+	{
+		width: 75%; 
+		vertical-align: top; 
+	
+	}
+	nav ul > li:hover
+	{
+		background-color: rgb(204,204,204); 
+	
+	}
+	nav td > ul > li
+	{
+		border-bottom: 1px solid #ffffff;
+		
+	}
+
+
+	/* the margin-left here controls how far the first megamenu tab is from the left for all pages except landing page */
+	nav > ul
+	{
+	   /*  margin: 0 auto;  no longer need to slide on resize*/
+	   margin: 0; /* this is needed for keeping it tight to the top */
+	   margin-left:160px; /* this is how far from the left everything appears */
+		width: 800px;
+	
+		height:100%;
+		display:table;
+	
+	
+	
+	}
+	nav > ul > li
+	{
+		height:100%;
+		border:1px solid #ede9d7;
+		display:table-cell;
+		vertical-align: middle;
+	}
+	
+	/* fix */
+	nav  ul  li  div  div
+	{
+			
+		left:0px;
+		position:relative;
+		margin-bottom:10px;
+		
+	}
+	
+	/* fix */
+	nav  ul  li  div  table  div {
+		
+		left:0px;
+		position:relative;
+		margin-bottom:10px;
+	}
+	
+	nav > ul > li:hover > a {  /* swap ":hover" with ".active" to allow this to work as a class */
+		background-color: rgb(204,204,204);
+	}
+
+	/* this is the part that shows the sub menu! */
+	nav > ul > li:hover > div { /* swap ":hover" with ".active" to allow this to work as a class */
+		left: 0;
+     
+		/* color:green; */
+ 
+		         		
+	}	
+	nav td{vertical-align:top;}
+	/* ====================================== */
+	/* end MEGAMENU top nav */
+	/* ====================================== */
+
+/* rotator  */
+
+.PSRotSelected
+{
+	/* background-color:#B9D2EE;*/
+	font-weight:bold;
+	padding:7px;
+	background-color:#F1F1E9;
+}
+.PSRotNotSelected
+{
+
+	padding:7px;
+	background-color:#F1F1E9;
+}
+
+#rotLeftImage{
+	
+	height:255px;
+	
+}
+.rotImage{
+	height:255px;
+	
+}
+#rotRightTable{
+	border: none;
+	
+}
+
+#rotCentre
+{
+	padding: 0px 15px 0px 15px;
+	
+}
+
+.PSRotator{
+	width:790px;
+	margin-right:40px;
+	border-style: solid !important;
+    border-color: #DFD9D2 !important;
+	border-width: 1px !important;	
+	
+}
+#rotLeftContent{}
+#rotLeftTitle{}
+#rotLeftSubTitle{}
+#rotRight{
+	padding: 0px;
+	background-color:#F1F1E9;
+}
+
+/* end rotator */
