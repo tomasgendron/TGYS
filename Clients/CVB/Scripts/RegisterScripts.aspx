@@ -104,9 +104,9 @@
                 spg.uninstallUserCustomActionAll("web");
             }); 
             $("button#autoload-commands").click(function () {
-                spg.installUserCustomActionCustom("site","SiteAssets/PSV/jquery-3.1.1.min.js",1);
-                spg.installUserCustomActionCustom("site","SiteAssets/CustomStyle.css",1);
-                spg.installUserCustomActionCustom("site","SiteAssets/PSV/PSJScript.js",1000);
+                spg.installUserCustomActionCustom("site","SiteAssets/PSV/js/jquery-3.1.1.min.js",1);
+                spg.installUserCustomActionCustom("site","SiteAssets/PSV/css/CustomStyle.css",1);
+                spg.installUserCustomActionCustom("site","SiteAssets/PSV/js/PSJScript.js",1000);
                 
             });             
 
@@ -461,9 +461,9 @@ button {
         <h2 class="ms-accentText">Install User Custom Action</h2>
 <div>
 <h2>Autoinstall will install</h2>
-<li>SiteAssets/PSV/jquery-3.1.1.min.js</li>
+<li>SiteAssets/PSV/js/jquery-3.1.1.min.js</li>
 <li>SiteAssets/CustomStyle.css</li>
-<li>SiteAssets/PSV/PSJScript.js</li>
+<li>SiteAssets/PSV/js/PSJScript.js</li>
 </div>
         <br />
 
