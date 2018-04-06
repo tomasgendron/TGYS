@@ -462,7 +462,7 @@ button {
 <div>
 <h2>Autoinstall will install</h2>
 <li>SiteAssets/PSV/js/jquery-3.1.1.min.js</li>
-<li>SiteAssets/CustomStyle.css</li>
+<li>SiteAssets/PSV/css/CustomStyle.css</li>
 <li>SiteAssets/PSV/js/PSJScript.js</li>
 </div>
         <br />
