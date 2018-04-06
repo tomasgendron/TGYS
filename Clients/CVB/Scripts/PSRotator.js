@@ -57,7 +57,7 @@ var PSRotator = window.PSRotator ||
 
 				$(rdata.d.results).each(function(i){
 					if(i==idx)
-						$("#rotRightTable").append("<tr><td><img src='"+  _spPageContextInfo.siteAbsoluteUrl  +"/SiteAssets/images/arrow.gif' /></td><td class='PSRotSelected' >" + this.Title + "<br>" + this.Sub_x0020_Title  +"</td></tr>");
+						$("#rotRightTable").append("<tr><td><img src='"+  _spPageContextInfo.siteAbsoluteUrl  +"/SiteAssets/PSV/images/arrow.gif' /></td><td class='PSRotSelected' >" + this.Title + "<br>" + this.Sub_x0020_Title  +"</td></tr>");
 					else
 						$("#rotRightTable").append("<tr><td> </td><td class='PSRotNotSelected'><a href='javascript:PSRotator.Lib.SetRotatorMemStop("+ i +")'>" + this.Title + "</a><br>" + this.Sub_x0020_Title  +"</td></tr>");
 				});			  
