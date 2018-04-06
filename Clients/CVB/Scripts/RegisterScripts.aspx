@@ -70,7 +70,7 @@
                 // The Help, Account and Contact pages receive the
                 //   same query string parameters as the main page
                 var options = {
-                    "appIconUrl": hostweburl + "/_layouts/15/IMAGES/LINKS.GIF",
+                    "appIconUrl": hostweburl + "/_layouts/15/PSV/images/LINKS.GIF",
                     "appTitle": "Custom Actions Configuration",
                     "siteUrl": (hostweburl || "/"),
                     // The onCssLoaded event allows you to
