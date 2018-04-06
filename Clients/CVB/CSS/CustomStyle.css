@@ -147,6 +147,7 @@ nav a,nav a:hover,nav a:active,nav a:visited
 	}
 	li.mtop {
 		 /* display: inline-block; */
+		 white-space: nowrap;
 		 background-color: #ede9d7;
 	}
 	li.mtop a {
