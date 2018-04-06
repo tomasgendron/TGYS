@@ -21,3 +21,5 @@ git pull origin master
 git add -A
 git commit -m "message"
 git push origin master
+
+Tomas Feb 7 2018. add delay to mega menu mouseover
