@@ -1,0 +1,30 @@
+News Rotator
+
+<div id="PSRotator" class='PSRotator'>
+<table><tr><td valign='top' id="rotLeft"><div id="rotLeftImage" style='float:left;'> </div></td>
+<td valign='top' id="rotCentre">
+
+<div style='float:right;'>
+<h2 id='rotLeftTitle'></h2>
+<h3 id='rotLeftSubTitle'></h3>
+<p id='rotLeftContent'></p>
+</div>
+
+</td>
+
+<td valign='top' id="rotRight">
+<table id="rotRightTable" cellspacing="0" cellpadding="0">
+
+</table>
+</td>
+
+</tr></table>
+</div>
+<script>
+
+function runWhenJQueryLoaded()
+{
+	$.getScript( _spPageContextInfo.siteAbsoluteUrl + "/SiteAssets/PSV/js/PSRotator.js" );
+       
+}
+</script>
