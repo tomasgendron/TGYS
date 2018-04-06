@@ -44,7 +44,7 @@ this code runs against this html from your page
 <script>
 function runWhenJQueryLoaded()
 {
-    $.getScript( _spPageContextInfo.siteAbsoluteUrl + "/SiteAssets/PSV/PSRotator.js" );
+    $.getScript( _spPageContextInfo.siteAbsoluteUrl + "/SiteAssets/PSV/js/PSRotator.js" );
      
 }
 </script>
