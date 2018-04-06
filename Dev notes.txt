@@ -15,7 +15,10 @@ creating new list UpcomingEvents to keep track of that list on home page
 Tomas Oct 26
 - change megamenu to left-margin 160 for all but landing page
 
-
+Create GIT from scratch
+- install git (https://git-scm.com/download/win)
+- change dir to PARENT of the TGYS folder (c: for instance)
+run in terminal: git clone "https://github.com/tomasgendron/TGYS.git"
 GIT commands
 git pull origin master
 git add -A
