@@ -33,6 +33,7 @@ var PSRotator = window.PSRotator ||
   {
 	  _rdata=null;
 	  _rotIdx = 1;
+	  _rotNumItems = 5;
 	  
 	  // this func will stop the timer from fliping news items
 	  function SetRotatorMemStop(idx)
@@ -86,7 +87,7 @@ var PSRotator = window.PSRotator ||
 		SetRotator(0);
 		function LoadRotatorData()
 		{
-			var p = RunAjax(_spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/GetByTitle('HomePageNews')/items?$orderby=Order0&$top=5");
+			var p = RunAjax(_spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/GetByTitle('HomePageNews')/items?$orderby=Order0&$top="+_rotNumItems);
 			p.done(function(rdata){
 				console.log(rdata);
 				_rdata = rdata;
@@ -101,7 +102,7 @@ var PSRotator = window.PSRotator ||
 
 			SetRotator(_rotIdx);
 			_rotIdx+=1;
-			if(_rotIdx>=5)
+			if(_rotIdx>=_rotNumItems)
 				_rotIdx=0;
 			//
 		}	
