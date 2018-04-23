@@ -43,7 +43,7 @@ padding-bottom:0px !important;
 	#conaFooter
 	{
 		
-    background-image: url(https://amrscrch.sharepoint.com/SiteAssets/images/bar_graphic.jpg);
+    background-image: url(https://amrscrch.sharepoint.com/SiteAssets/PSV/images/bar_graphic.jpg);
     background-position-x: 0px;
     background-position-y: 0px;
 	height:50px;
@@ -64,7 +64,7 @@ padding-bottom:0px !important;
 	
 	div#DeltaPlaceHolderLeftNavBar a.selected
 	{
-		background: url(https://amrscrch.sharepoint.com/SiteAssets/images/selbg.png) repeat-x left top;
+		background: url(https://amrscrch.sharepoint.com/SiteAssets/PSV/images/selbg.png) repeat-x left top;
 		background-color: #b7e1cc !important;
 		border-color: #8fc3a9 !important;
 		border-top-color: #b7e1cc !important;
@@ -217,7 +217,7 @@ padding-bottom:0px !important;
 	}
 	#s4-bodyContainer > #s4-titlerow {
 	padding-bottom: 18px !important;
-	background-image: url("/SiteAssets/images/banner long.jpg") !important;
+	background-image: url("/SiteAssets/PSV/images/banner long.jpg") !important;
 	}
 	
 	.ms-breadcrumb-top .menu-item-text
@@ -238,13 +238,12 @@ padding-bottom:0px !important;
 	/* ====================================== */
 
 	nav {
-		/* background-color: #000000; */
 		position: relative;
 		width: 100%;
 		margin-top:1px;
-		height:28px;
+		height:27px;
 		font-size:1.2em;
-		background-color:#000000;
+		background-color:#2431AB; /* Changed by YS */
 		
 	}
 	nav a,nav a:hover,nav a:active,nav a:visited
@@ -256,7 +255,7 @@ padding-bottom:0px !important;
 	
 	nav td
 	{
-	background-color:#000000;
+	background-color:#2431AB; /* Changed by YS */
 	}
 	
 	nav ul {
@@ -274,12 +273,12 @@ padding-bottom:0px !important;
 		width: 250px;
 	}
 	li.mtop {
-		 /* display: inline-block; */
-		 background-color: #000000;
+		 /* display: inline-block; */		
+		 background-color: #2431AB; /* Changed by YS */
 	}
 	li.mtop a {
 		 display: block; 
-		 padding: 0.25em 1em; 
+		 padding-bottom: 0.25em 1em;
 	}
 	li.mtop ul
 	{
@@ -291,7 +290,7 @@ padding-bottom:0px !important;
 
 	/* fix */
 	nav  ul  li  div { /* nested div (containing the sub nav) will be hidden by default */
-		background-color: transparent;
+		background-color: transparent; 
 		width: 100%;
 		position: absolute;
 		left: -9999px;
@@ -324,9 +323,9 @@ padding-bottom:0px !important;
 	
 	nav table.PSinsidetable
 	{
-		background-color:#000000;
+		background-color:transparent; /* Changed by YS */
 		border:none;
-		width:600px;
+		width:500px; /* Changed by YS */
 	
 	}
 	
@@ -374,11 +373,13 @@ padding-bottom:0px !important;
 	nav > ul > li
 	{
 		height:100%;
-		border:1px solid white;
+		border-left:1.5px solid white;		
 		display:table-cell;
 		vertical-align: middle;
 	}
 	
+	nav > ul > li:last-child { border-right:1.5px solid white; }
+
 	/* fix */
 	nav  ul  li  div  div
 	{
@@ -476,3 +477,5 @@ padding-bottom:0px !important;
 	/* end rotator */
 	/* ====================================== */
 	
+
+	/* CustomStyle.css (240, 7) */
