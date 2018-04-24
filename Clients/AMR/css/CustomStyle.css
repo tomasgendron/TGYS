@@ -1,7 +1,7 @@
 ﻿/* tomas changes oct 22/2017 */
 /* line up with logo spike */
 /* Yogi's code is merged with TG's */
-/* Added to keep hyperlink's color as green on home page. */
+
 
 
 #contentBox
@@ -21,7 +21,7 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 
 	/* footer */
 
-.itgfooterCopyright {
+.PSfooterCopyright {
     vertical-align: middle;
     color: #ffffff;
     line-height: 50px;
@@ -39,8 +39,8 @@ div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHold
 padding-bottom:0px !important;
 }
 
-
-	#conaFooter
+/* Change for Customer Branding */
+	#PSFooter
 	{
 		
     background-image: url(https://amrscrch.sharepoint.com/SiteAssets/PSV/images/bar_graphic.jpg);
@@ -62,12 +62,13 @@ padding-bottom:0px !important;
 	
 	}
 	
+	/* Change for Customer Branding */
 	div#DeltaPlaceHolderLeftNavBar a.selected
 	{
 		background: url(https://amrscrch.sharepoint.com/SiteAssets/PSV/images/selbg.png) repeat-x left top;
-		background-color: #b7e1cc !important;
-		border-color: #8fc3a9 !important;
-		border-top-color: #b7e1cc !important;
+		background-color: #c7e4f9 !important;
+		border-color: #c7e4f9 !important;
+		border-top-color: #c7e4f9 !important;
 		border-width: 1px !important;
 		/* padding-left: 9px !important; */
 		color: #003759 !important;
@@ -158,10 +159,12 @@ padding-bottom:0px !important;
 	
 	/* Reset Suite Bar container height */
 	#suiteBarTop {
-		height: 27px !important;
+		height: 45px !important;
 	}
 	 
 	/* Change height of all sub components in Suite Bar */
+	/* Change for On Prem vs O365 Branding */
+
 	#suiteBarDelta .o365cs-nav-header16,
 	#suiteBarDelta .o365cs-nav-o365Branding,
 	#suiteBarDelta .o365cs-nav-button,	
@@ -170,12 +173,12 @@ padding-bottom:0px !important;
 	#suiteBarDelta .o365cs-me-tile-nophoto-username,
 	#suiteBarDelta .o365cs-me-tile-nophoto-down
 	{
-		height: 27px !important;
+		height: 45px !important;
 	}
 
 	#suiteBarDelta .o365cs-nav-contextMenu
 	{
-		top: 27px !important;
+		top: 45px !important;
 	}
 
 	/*#pageTitle {display:none} */
@@ -205,6 +208,7 @@ padding-bottom:0px !important;
 		margin-left: 450px;
 	}
 	
+	/* Change for Customer Branding */
 	#suiteBarTop 
 	{
 	background-color:#042862;
@@ -241,9 +245,10 @@ padding-bottom:0px !important;
 		position: relative;
 		width: 100%;
 		margin-top:1px;
-		height:27px;
+		height:28px;
 		font-size:1.2em;
-		background-color:#2431AB; /* Changed by YS */
+		
+		background-color:#042961; /* Change for Customer Branding */
 		
 	}
 	nav a,nav a:hover,nav a:active,nav a:visited
@@ -255,7 +260,7 @@ padding-bottom:0px !important;
 	
 	nav td
 	{
-	background-color:#2431AB; /* Changed by YS */
+	background-color:#042961; /* Change for Customer Branding */
 	}
 	
 	nav ul {
@@ -274,11 +279,11 @@ padding-bottom:0px !important;
 	}
 	li.mtop {
 		 /* display: inline-block; */		
-		 background-color: #2431AB; /* Changed by YS */
+		 background-color: #042961; /* Change for Customer Branding */
 	}
 	li.mtop a {
 		 display: block; 
-		 padding-bottom: 0.25em 1em;
+		 padding: 0.25em 1em;
 	}
 	li.mtop ul
 	{
@@ -289,6 +294,7 @@ padding-bottom:0px !important;
 	
 
 	/* fix */
+	/* Added menu delay SL */
 	nav  ul  li  div { /* nested div (containing the sub nav) will be hidden by default */
 		background-color: transparent; 
 		width: 100%;
@@ -297,6 +303,12 @@ padding-bottom:0px !important;
 		z-index:999999;
 		margin-top:1px;
 	
+		-webkit-transition-delay:0.25s;     
+        -moz-transition-delay:0.25s; 
+        -ms-transition-delay:0.25s;     
+        -o-transition-delay:0.25s;     
+		transition-delay:0.25s;  
+
 	}
 
 	/* fix */
@@ -347,7 +359,7 @@ padding-bottom:0px !important;
 	}
 	nav ul > li:hover
 	{
-		background-color: #0072c6; 
+		background-color: #3865bb; /* Change for Customer Branding */
 	
 	}
 	nav td > ul > li
@@ -373,12 +385,12 @@ padding-bottom:0px !important;
 	nav > ul > li
 	{
 		height:100%;
-		border-left:1.5px solid white;		
+		border-left:1px solid white;		
 		display:table-cell;
 		vertical-align: middle;
 	}
 	
-	nav > ul > li:last-child { border-right:1.5px solid white; }
+	nav > ul > li:last-child { border-right:1px solid white; } 
 
 	/* fix */
 	nav  ul  li  div  div
@@ -399,11 +411,10 @@ padding-bottom:0px !important;
 	}
 	
 	nav > ul > li:hover > a {  /* swap ":hover" with ".active" to allow this to work as a class */
-		background-color: #0072c6;
+		background-color: #3865bb; /* Change for Customer Branding */
 	}
 	nav > ul > li:hover > div { /* swap ":hover" with ".active" to allow this to work as a class */
 		left: 0;
-		/* color:green; */
 	}	
 	nav td{vertical-align:top;}
 	/* ====================================== */
