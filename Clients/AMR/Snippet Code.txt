@@ -1,0 +1,85 @@
+Left Snippet
+===============
+<!-- this is just here for spacing -->
+
+<div style='width:200px'> </div>
+
+Right Snippet
+===============
+<div id="PSRightNav">
+<div class='homePageCategory'>CATEGORY 1</div>
+<div linkcat="Category 1"></div>
+<div class='homePageCategory'>CATEGORY 2</div>
+<div linkcat="Category 2"></div>
+<div class='homePageCategory'>CATEGORY 3</div>
+<div linkcat="Category 3"></div>
+</div></div>
+
+From CBV
+<div id="PSRightNav">
+<div class='homePageCategory'></div>
+<div linkcat="Category 1"></div>
+</div></div>
+
+
+Bottom Snippet
+===============
+<style>
+#sideNavBox { DISPLAY: none }
+.ms-webpartPage-root {
+   border-spacing: 15px; 
+}
+#contentBox { margin-left: 0px }
+.ms-webpartzone-cell,
+.ms-webpart-zone {
+    border-collapse: collapse;
+}
+#pageTitle {display:none} 
+div.ms-breadcrumb-top {display:none} 
+
+
+
+</style>
+<style>
+div.ms-tileview-tile-root{
+margin-right: 45px !important;
+}
+
+</style>
+==========================
+CEWP bottom runs this file (no title, no chrometype_:
+/sites/YOURSITEHERE/siteassets/js/HomePageScript.js
+==========================
+
+
+
+News Rotator
+==============
+<div id="PSRotator" class='PSRotator'>
+<table><tr><td valign='top' id="rotLeft"><div id="rotLeftImage" style='float:left;'> </div></td>
+<td valign='top' id="rotCentre">
+
+<div style='float:right;'>
+<h2 id='rotLeftTitle'></h2>
+<h3 id='rotLeftSubTitle'></h3>
+<p id='rotLeftContent'></p>
+</div>
+
+</td>
+
+<td valign='top' id="rotRight">
+<table id="rotRightTable" cellspacing="0" cellpadding="0">
+
+</table>
+</td>
+
+</tr></table>
+</div>
+<script>
+
+function runWhenJQueryLoaded()
+{
+	$.getScript( _spPageContextInfo.siteAbsoluteUrl + "/SiteAssets/PSV/js/PSRotator.js" );
+       
+}
+</script>
