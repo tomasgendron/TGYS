@@ -180,13 +180,56 @@ padding-bottom:0px !important;
 	{
 		top: 45px !important;
 	}
+/*#pageTitle {display:none} */
+/*
+#DeltaPlaceHolderPageTitleInTitleArea {display:none}
 
-	/*#pageTitle {display:none} */
-	/*
-	#DeltaPlaceHolderPageTitleInTitleArea {display:none}
+
+
+*/
+
+#contentRow
+	{
 		
-	*/
-	/* Home page styles */
+		padding-top:40px;
+	} 
+
+#pageTitle {
+    display: block;
+	font-weight: bold;
+    font-size: 1.2em;
+    white-space: nowrap;
+    margin-left: 450px;
+}
+
+.ms-breadcrumb-top
+{
+	margin-left: 450px;
+}
+/* Change for Customer Branding */
+#suiteBarTop 
+{
+background-color:#042862;
+
+}
+div#DeltaSiteLogo
+{
+	display:block;
+	
+}
+#s4-bodyContainer > #s4-titlerow {
+	padding-bottom: 18px !important;
+	background-image: url("/SiteAssets/PSV/images/banner long.jpg") !important;
+	}
+
+
+.ms-breadcrumb-top .menu-item-text
+{
+	color:#ffffff;
+	
+}
+
+/* Home page styles */
 
 .homePageCategory
 {
@@ -222,78 +265,40 @@ display: none;
 	
 /* end home page */
 
-	#contentRow
-	{
-		
-		padding-top:40px;
-	} 
-	
-	#pageTitle {
-		display: block;
-		font-weight: bold;
-		font-size: 1.2em;
-		white-space: nowrap;
-		margin-left: 450px;
-	}
-	
-	.ms-breadcrumb-top
-	{
-		margin-left: 450px;
-	}
-	
-	/* Change for Customer Branding */
-	#suiteBarTop 
-	{
-	background-color:#042862;
-	
-	}
-	div#DeltaSiteLogo
-	{
-		display:block;
-		
-	}
-	#s4-bodyContainer > #s4-titlerow {
-	padding-bottom: 18px !important;
-	background-image: url("/SiteAssets/PSV/images/banner long.jpg") !important;
-	}
-	
-	.ms-breadcrumb-top .menu-item-text
-	{
-		color:#ffffff;
-		
-	}
-	
+/* top nav div, ul, li, a {margin: 0; padding: 0; border: 0;} */
 
-	
-	body {
-		background-color: #fff;
-	}
-	
+body {
+    background-color: #fff;
+}
+
+
 	
 	/* ====================================== */
 	/* MEGAMENU  */
 	/* ====================================== */
 
-	nav {
-		position: relative;
-		width: 100%;
-		margin-top:1px;
-		height:28px;
-		font-size:1.2em;
+nav {
+    
+    position: relative;
+	width: 100%;
+	margin-top:1px;
+	height:28px;
+	font-size:1.2em;
 		
-		background-color:#042961; /* Change for Customer Branding */
+	background-color:#042961; /* Change for Customer Branding */
 		
-	}
-	nav a,nav a:hover,nav a:active,nav a:visited
+	
+}
+nav a,nav a:hover,nav a:active,nav a:visited
 	{
-	color: white;
+		color: white;
 	text-decoration:none;
 	
 	}
 	
 	nav td
 	{
-	background-color:#042961; /* Change for Customer Branding */
+		background-color:#042961; /* Change for Customer Branding */
 	}
 	
 	nav ul {
@@ -311,13 +316,20 @@ display: none;
 		width: 250px;
 	}
 	li.mtop {
-		 /* display: inline-block; */		
+		 /* display: inline-block; */
+		 white-space: nowrap;
 		 background-color: #042961; /* Change for Customer Branding */
 	}
-	li.mtop a {
+	li.mtop > a {
 		 display: block; 
-		 padding: 0.25em 1em;
+		 padding: 0.25em 1em; 
+		 color: black;
 	}
+	li.mtop > a:visited
+	{
+		color:black;
+	}
+
 	li.mtop ul
 	{
 		list-style:none;
@@ -368,21 +380,21 @@ display: none;
 	
 	nav table.PSinsidetable
 	{
-		background-color:transparent; /* Changed by YS */
+		background-color:transparent;
 		border:none;
-		width:500px; /* Changed by YS */
+		width:500px;
 	
 	}
 	
 	.menuHtmlContent
 	{
 	
-		color:#ffffff;
+	/*	color:#ffffff; */
 	}
 	.menuHtmlHeading
 	{
 		font-weight:bold;
-		color:#ffffff;
+	/*	color:#ffffff; */
 	}
 	.menuHtmlRight
 	{
@@ -406,7 +418,8 @@ display: none;
 	nav > ul
 	{
 	   /*  margin: 0 auto;  no longer need to slide on resize*/
-	   margin-left:160px;
+	   margin: 0; /* this is needed for keeping it tight to the top */
+	   margin-left:160px; /* this is how far from the left everything appears */
 		width: 800px;
 	
 		height:100%;
@@ -425,6 +438,7 @@ display: none;
 	
 	nav > ul > li:last-child { border-right:1px solid white; } 
 
+	
 	/* fix */
 	nav  ul  li  div  div
 	{
@@ -446,80 +460,73 @@ display: none;
 	nav > ul > li:hover > a {  /* swap ":hover" with ".active" to allow this to work as a class */
 		background-color: #3865bb; /* Change for Customer Branding */
 	}
+
+	/* this is the part that shows the sub menu! */
 	nav > ul > li:hover > div { /* swap ":hover" with ".active" to allow this to work as a class */
 		left: 0;
+     
+		/* color:green; */
+ 
+		         		
 	}	
 	nav td{vertical-align:top;}
 	/* ====================================== */
 	/* end MEGAMENU top nav */
 	/* ====================================== */
-	
-	
-	/* ====================================== */
-	/* rotator  */
-	/* ====================================== */
-	
-	
-	
-	.PSRotSelected
-	{
-		/* background-color:#B9D2EE;*/
-		font-weight:bold;
-		padding:7px;
-		background-color:#F1F1E9;
-	}
-	.PSRotNotSelected
-	{
-	
-		padding:7px;
-		background-color:#F1F1E9;
-	}
-	.PSRotNotSelected > a,.PSRotNotSelected > a,.PSRotNotSelected > a:hover,.PSRotNotSelected > a:active,.PSRotNotSelected > a:visited
+
+/* rotator  */
+
+.PSRotSelected
+{
+	/* background-color:#B9D2EE;*/
+	font-weight:bold;
+	padding:7px;
+	background-color:#F1F1E9;
+}
+.PSRotNotSelected
+{
+
+	padding:7px;
+	background-color:#F1F1E9;
+}
+.PSRotNotSelected > a,.PSRotNotSelected > a,.PSRotNotSelected > a:hover,.PSRotNotSelected > a:active,.PSRotNotSelected > a:visited
 	{
 		color:#0072c6;
 	}
+#rotLeftImage{
 	
-	#rotLeftImage{
-		
-		height:255px;
-		
-	}
-	.rotImage{
-		height:255px;
-		
-	}
-	#rotRightTable{
-		border: none;
-		
-	}
+	height:255px;
 	
+}
+.rotImage{
+	height:255px;
 	
+}
+#rotRightTable{
+	border: none;
 	
-	#rotCentre
-	{
-		padding: 0px 15px 0px 15px;
-		
-	}
-	
-	.PSRotator{
-		width:790px;
-		margin-right:40px;
-		border-style: solid !important;
-		border-color: #DFD9D2 !important;
-		border-width: 1px !important;	
-		
-	}
-	#rotLeftContent{}
-	#rotLeftTitle{}
-	#rotLeftSubTitle{}
-	#rotRight{
-		padding: 0px;
-		background-color:#F1F1E9;
-	}
-	
-	/* ====================================== */
-	/* end rotator */
-	/* ====================================== */
-	
+}
 
-	/* CustomStyle.css (240, 7) */
+#rotCentre
+{
+	padding: 0px 15px 0px 15px;
+	
+}
+
+.PSRotator{
+	width:790px;
+	margin-right:40px;
+	border-style: solid !important;
+    border-color: #DFD9D2 !important;
+	border-width: 1px !important;	
+	
+}
+#rotLeftContent{}
+#rotLeftTitle{}
+#rotLeftSubTitle{}
+#rotRight{
+	padding: 0px;
+	background-color:#F1F1E9;
+}
+
+/* end rotator */
