@@ -109,7 +109,14 @@ PSData.Lib = function () {
 		//The following is not the best way to get it but it will work without any issues.
 		var wholeUrl=_spPageContextInfo.siteAbsoluteUrl;
 		var childSiteCollectionPath=_spPageContextInfo.siteServerRelativeUrl;
-		var rootSiteCollectionUrl=wholeUrl.replace(childSiteCollectionPath,"");		
+		
+		var rootSiteCollectionUrl="";
+		if (childSiteCollectionPath!=="/"){ //YS: To handle other site collections
+			rootSiteCollectionUrl=wholeUrl.replace(childSiteCollectionPath,"");	
+		}else{ //YS: To handle root site collection
+			rootSiteCollectionUrl =wholeUrl;
+		}
+			
 		var requestUri = rootSiteCollectionUrl+ "/_api/web/lists/getByTitle('MenuConfig')/items?$filter=Lang%20eq%20%27en%27&$orderby=Order0";
 		return RunAjax(requestUri);
 	}
