@@ -1,0 +1,525 @@
+﻿/* tomas changes oct 22/2017 */
+/* line up with logo spike */
+/* Yogi's code is merged with TG's */
+
+
+
+#contentBox
+{
+	min-height:450px !important; 
+/*	float:none !important; */
+}
+
+div#DeltaPlaceHolderMain a, div#DeltaPlaceHolderMain a:hover, div#DeltaPlaceHolderMain a:active, div#DeltaPlaceHolderMain a:visited {
+	color:#0072c6;
+	}
+
+.ms-webpart-titleText span {
+	color:#0072c6;
+	}	
+			
+
+	/* footer */
+
+.PSfooterCopyright {
+    vertical-align: middle;
+    color: #ffffff;
+    line-height: 50px;
+    margin-right: 10px;
+	text-align: right;
+    height: 50px;
+    float:right;
+    background-position: 15px 50%;
+    background-repeat: no-repeat;
+    clear: both;
+}
+
+/* remove the padding so footer is at bottom */
+#s4-bodyContainer {
+padding-bottom:0px !important;
+}
+
+/* Change for Customer Branding */
+	#PSFooter
+	{
+		
+    background-image: url('./SiteAssets/PSV/images/bar_graphic.jpg');
+    background-position-x: 0px;
+    background-position-y: 0px;
+	height:50px;
+	
+
+	}
+
+	/* end footer */		
+
+	div#DeltaPlaceHolderLeftNavBar span.menu-item-text
+	{
+	
+		font-variant: small-caps;
+		font-weight: bold;
+		color: #0072c6;
+	
+	}
+	
+	/* Change for Customer Branding */
+	div#DeltaPlaceHolderLeftNavBar a.selected
+	{
+		background: url('./SiteAssets/PSV/images/selbg.png') repeat-x left top;
+		background-color: #c7e4f9 !important;
+		border-color: #c7e4f9 !important;
+		border-top-color: #c7e4f9 !important;
+		border-width: 1px !important;
+		/* padding-left: 9px !important; */
+		color: #003759 !important;
+	
+	}
+	div#DeltaPlaceHolderLeftNavBar a.ms-core-listMenu-item:hover
+	{
+	background-color:white;
+	text-decoration: underline;
+	}
+	
+
+	
+	/* hide sharepoint logo */
+	span.o365cs-nav-brandingText
+	{
+		visibility: hidden;
+	}
+	
+	.homelinkContainer
+	{
+		border:1px solid black;
+	}
+	
+	.upcomingEventItem
+	{
+		color:#0072c6;
+	}
+	
+	.upcomingEventItem > span.upcomingeventtext
+	{
+		display:inline-block;
+		width:170px;
+	}
+	.upcomingEventItem > span.upcomingeventDate
+	{
+		margin-left:15px;
+		display:inline-block;
+	}
+	
+	/* stock styles */
+	.stockttext,  .stockttext:hover,.stockttext:active,.stockttext:visited
+	{
+	FONT-SIZE: 11pt; 
+	PADDING-RIGHT: 5px;
+	color:#0072c6;
+	text-decoration: none;
+	}
+	.stockcontainer
+	{
+		float:right;
+	margin-left:70px;
+	margin-top:20px
+	}
+	/*end stock styles */
+	
+	.ms-core-navigationXYZ { DISPLAY: none }
+	
+	/*#sideNavBox { DISPLAY: none } */
+	
+	
+	/* this controls the bar with Share follow */
+	#s4-ribboncont {
+	background-color:#000000;}
+	
+	.ms-core-pageTitle, .ms-core-pageTitle a
+	{
+		color:white !important;
+	}
+	
+	/* To change EDIT LINKS to white */
+	
+	a[title='Edit Links'][id $= 'TopNavigationMenu_NavMenu_EditLinks'].ms-navedit-editLinksText > span > .ms-metadata,
+	a[title='Edit Links'][id $= 'TopNavigationMenu_NavMenu_EditLinks'].ms-navedit-editLinksText:hover > span > .ms-metadata
+	{
+	  color:white;
+	}
+	
+
+	.ms-srch-sb {display:none;}
+	
+	/* Added by YS for adjustment of SuiteBar and Top margin */
+	/* #RibbonContainer-TabRowRight a[id$=site_share_button] {
+	display: none !important;
+	} */
+
+    #RibbonContainer-TabRowRight { display: none !important;}
+	
+	/* Reset Suite Bar container height */
+	#suiteBarTop {
+		height: 45px !important;
+	}
+	 
+	/* Change height of all sub components in Suite Bar */
+	/* Change for On Prem vs O365 Branding */
+
+	#suiteBarDelta .o365cs-nav-header16,
+	#suiteBarDelta .o365cs-nav-o365Branding,
+	#suiteBarDelta .o365cs-nav-button,	
+	#suiteBarDelta .o365cs-me-tile-nophoto,
+	#suiteBarDelta .o365cs-me-tile-nophoto-username-container,
+	#suiteBarDelta .o365cs-me-tile-nophoto-username,
+	#suiteBarDelta .o365cs-me-tile-nophoto-down
+	{
+		height: 45px !important;
+	}
+
+	#suiteBarDelta .o365cs-nav-contextMenu
+	{
+		top: 45px !important;
+	}
+
+	/*#pageTitle {display:none} */
+	/*
+	#DeltaPlaceHolderPageTitleInTitleArea {display:none}
+		
+	*/
+	/* Home page styles */
+
+.homePageCategory
+{
+color:#808080;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div#PSMiddleContent{
+background-color:#e9eff1;
+width:70%;
+}
+
+div#PSLeftNav div
+{
+	margin-bottom:10px;
+	padding:5px 5px 5px 5px;
+	width: 100px;
+	}
+	
+div#PSRightNav div
+{
+	margin-bottom:1px;
+	padding:5px 5px 5px 5px;
+	width: 150px;
+	}	
+	
+	div#PSLeftNav a,div#PSLeftNav a:hover,div#PSLeftNav a:active,div#PSLeftNav a:visited { color: white; }
+	div#PSRightNav a,div#PSRightNav a:hover,div#PSRightNav a:active,div#PSRightNav a:visited { color: white; }
+
+	.ms-promlink-header {
+display: none;
+}
+	
+/* end home page */
+
+	#contentRow
+	{
+		
+		padding-top:40px;
+	} 
+	
+	#pageTitle {
+		display: block;
+		font-weight: bold;
+		font-size: 1.2em;
+		white-space: nowrap;
+		margin-left: 450px;
+	}
+	
+	.ms-breadcrumb-top
+	{
+		margin-left: 450px;
+	}
+	
+	/* Change for Customer Branding */
+	#suiteBarTop 
+	{
+	background-color:#042862;
+	
+	}
+	div#DeltaSiteLogo
+	{
+		display:block;
+		
+	}
+	#s4-bodyContainer > #s4-titlerow {
+	padding-bottom: 18px !important;
+	background-image: url("/SiteAssets/PSV/images/banner long.jpg") !important;
+	}
+	
+	.ms-breadcrumb-top .menu-item-text
+	{
+		color:#ffffff;
+		
+	}
+	
+
+	
+	body {
+		background-color: #fff;
+	}
+	
+	
+	/* ====================================== */
+	/* MEGAMENU  */
+	/* ====================================== */
+
+	nav {
+		position: relative;
+		width: 100%;
+		margin-top:1px;
+		height:28px;
+		font-size:1.2em;
+		
+		background-color:#042961; /* Change for Customer Branding */
+		
+	}
+	nav a,nav a:hover,nav a:active,nav a:visited
+	{
+	color: white;
+	text-decoration:none;
+	
+	}
+	
+	nav td
+	{
+	background-color:#042961; /* Change for Customer Branding */
+	}
+	
+	nav ul {
+		list-style: none; 
+		
+	}
+	.linkContainer
+	{
+		white-space: nowrap;
+		padding-right:20px;
+	
+	}
+	.linkContainer > ul > li
+	{
+		width: 250px;
+	}
+	li.mtop {
+		 /* display: inline-block; */		
+		 background-color: #042961; /* Change for Customer Branding */
+	}
+	li.mtop a {
+		 display: block; 
+		 padding: 0.25em 1em;
+	}
+	li.mtop ul
+	{
+		list-style:none;
+		padding-left:0px;
+	
+	}
+	
+
+	/* fix */
+	/* Added menu delay SL */
+	nav  ul  li  div { /* nested div (containing the sub nav) will be hidden by default */
+		background-color: transparent; 
+		width: 100%;
+		position: absolute;
+		left: -9999px;
+		z-index:999999;
+		margin-top:1px;
+	
+		-webkit-transition-delay:0.25s;     
+        -moz-transition-delay:0.25s; 
+        -ms-transition-delay:0.25s;     
+        -o-transition-delay:0.25s;     
+		transition-delay:0.25s;  
+
+	}
+
+	/* fix */
+	nav  ul  li  div  ul {
+		margin: 0 auto;
+		/* width: 1024px; */
+	}
+	
+	/* nav ul li div table */
+	
+	nav table.PSoutertable {
+		background-color:#000000;
+	   /*  margin: 0 auto;  no longer need to slide on resize*/
+	   margin-left:200px;
+		width: 800px; 
+		border:1px solid #000000;
+		margin-bottom:10px;
+	}
+	/*
+	nav ul li div table table {
+	
+	}
+	*/
+	
+	nav table.PSinsidetable
+	{
+		background-color:transparent; /* Changed by YS */
+		border:none;
+		width:500px; /* Changed by YS */
+	
+	}
+	
+	.menuHtmlContent
+	{
+	
+		color:#ffffff;
+	}
+	.menuHtmlHeading
+	{
+		font-weight:bold;
+		color:#ffffff;
+	}
+	.menuHtmlRight
+	{
+		width: 75%; 
+		vertical-align: top; 
+	
+	}
+	nav ul > li:hover
+	{
+		background-color: #3865bb; /* Change for Customer Branding */
+	
+	}
+	nav td > ul > li
+	{
+		border-bottom: 1px solid #ffffff;
+		
+	}
+
+
+	/* the margin-left here controls how far the first megamenu tab is from the left for all pages except landing page */
+	nav > ul
+	{
+	   /*  margin: 0 auto;  no longer need to slide on resize*/
+	   margin-left:160px;
+		width: 800px;
+	
+		height:100%;
+		display:table;
+	
+	
+	
+	}
+	nav > ul > li
+	{
+		height:100%;
+		border-left:1px solid white;		
+		display:table-cell;
+		vertical-align: middle;
+	}
+	
+	nav > ul > li:last-child { border-right:1px solid white; } 
+
+	/* fix */
+	nav  ul  li  div  div
+	{
+			
+		left:0px;
+		position:relative;
+		margin-bottom:10px;
+		
+	}
+	
+	/* fix */
+	nav  ul  li  div  table  div {
+		
+		left:0px;
+		position:relative;
+		margin-bottom:10px;
+	}
+	
+	nav > ul > li:hover > a {  /* swap ":hover" with ".active" to allow this to work as a class */
+		background-color: #3865bb; /* Change for Customer Branding */
+	}
+	nav > ul > li:hover > div { /* swap ":hover" with ".active" to allow this to work as a class */
+		left: 0;
+	}	
+	nav td{vertical-align:top;}
+	/* ====================================== */
+	/* end MEGAMENU top nav */
+	/* ====================================== */
+	
+	
+	/* ====================================== */
+	/* rotator  */
+	/* ====================================== */
+	
+	
+	
+	.PSRotSelected
+	{
+		/* background-color:#B9D2EE;*/
+		font-weight:bold;
+		padding:7px;
+		background-color:#F1F1E9;
+	}
+	.PSRotNotSelected
+	{
+	
+		padding:7px;
+		background-color:#F1F1E9;
+	}
+	.PSRotNotSelected > a,.PSRotNotSelected > a,.PSRotNotSelected > a:hover,.PSRotNotSelected > a:active,.PSRotNotSelected > a:visited
+	{
+		color:#0072c6;
+	}
+	
+	#rotLeftImage{
+		
+		height:255px;
+		
+	}
+	.rotImage{
+		height:255px;
+		
+	}
+	#rotRightTable{
+		border: none;
+		
+	}
+	
+	
+	
+	#rotCentre
+	{
+		padding: 0px 15px 0px 15px;
+		
+	}
+	
+	.PSRotator{
+		width:790px;
+		margin-right:40px;
+		border-style: solid !important;
+		border-color: #DFD9D2 !important;
+		border-width: 1px !important;	
+		
+	}
+	#rotLeftContent{}
+	#rotLeftTitle{}
+	#rotLeftSubTitle{}
+	#rotRight{
+		padding: 0px;
+		background-color:#F1F1E9;
+	}
+	
+	/* ====================================== */
+	/* end rotator */
+	/* ====================================== */
+	
+
+	/* CustomStyle.css (240, 7) */
