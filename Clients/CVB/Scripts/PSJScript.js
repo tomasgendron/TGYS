@@ -174,13 +174,32 @@ var PSData = window.PSData ||
 		}
 
 
+		// function getMenuConfig() {
+		// 	//var requestUri = _spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/getByTitle('MenuConfig')/items?$filter=Lang%20eq%20%27en%27&$orderby=Order0";
+		// 	var requestUri = _spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/getByTitle('MenuConfig')/items?$filter=Lang%20eq%20%27en%27&$orderby=Order0";
+		//     return RunAjax2(requestUri);
+		// }
+		
 		function getMenuConfig() {
-			//var requestUri = _spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/getByTitle('MenuConfig')/items?$filter=Lang%20eq%20%27en%27&$orderby=Order0";
-			var requestUri = _spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/getByTitle('MenuConfig')/items?$filter=Lang%20eq%20%27en%27&$orderby=Order0";
-		    return RunAjax2(requestUri);
+		//var requestUri = _spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/getByTitle('MenuConfig')/items?$filter=Lang%20eq%20%27en%27&$orderby=Order0";
+		//ToDo:Yogi
+		//Revisit following code, I have provided this to fix an issue Scott reported on Apr 27, 2018
+		//The above code will not work in AMR due to child site collection url. 
+		//The following is not the best way to get it but it will work without any issues.
+		var wholeUrl=_spPageContextInfo.siteAbsoluteUrl;
+		var childSiteCollectionPath=_spPageContextInfo.siteServerRelativeUrl;
+		
+		var rootSiteCollectionUrl="";
+		if (childSiteCollectionPath!=="/"){ //YS: To handle other site collections
+			rootSiteCollectionUrl=wholeUrl.replace(childSiteCollectionPath,"");	
+		}else{ //YS: To handle root site collection
+			rootSiteCollectionUrl =wholeUrl;
 		}
-		
-		
+			
+		var requestUri = rootSiteCollectionUrl+ "/_api/web/lists/getByTitle('MenuConfig')/items?$filter=Lang%20eq%20%27en%27&$orderby=Order0";
+		return RunAjax2(requestUri);
+	}
+
 	  	return {
         AddtoHash: AddtoHash,
 		RunAjax2: RunAjax2,
