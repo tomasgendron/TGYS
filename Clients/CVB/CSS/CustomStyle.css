@@ -7,6 +7,11 @@
 background-color:#042862;}
 
 
+.ms-siteicon-img {
+    display: block;
+    max-width: 400px !important;
+    max-height: 50px !important;
+}
 
 
 .ms-srch-sb {display:none;}
@@ -78,9 +83,9 @@ width:70%;
 
 div#PSLeftNav div
 {
-	margin-bottom:10px;
+	margin-bottom:1px;
 	padding:5px 5px 5px 5px;
-	width: 100px;
+	width: 150px;
 	}
 	
 div#PSRightNav div
@@ -144,6 +149,7 @@ nav a,nav a:hover,nav a:active,nav a:visited
 	.linkContainer > ul > li
 	{
 		width: 250px;
+		padding: 3px;
 	}
 	li.mtop {
 		 /* display: inline-block; */
@@ -154,6 +160,7 @@ nav a,nav a:hover,nav a:active,nav a:visited
 		 display: block; 
 		 padding: 0.25em 1em; 
 		 color: black;
+		 font-size: 11pt;
 	}
 	li.mtop > a:visited
 	{
@@ -240,6 +247,7 @@ nav a,nav a:hover,nav a:active,nav a:visited
 	nav td > ul > li
 	{
 		border-bottom: 1px solid #ffffff;
+		font-size: 11pt;
 		
 	}
 

@@ -67,16 +67,16 @@ table#mainWebPartTable
 	
 	div#PSLeftNav div
 	{
-		margin-bottom:10px;
+		margin-bottom:1px;
 		padding:5px 5px 5px 5px;
-		width: 100px;
+		/* width: 150px; */
 		}
 		
 	div#PSRightNav div
 	{
 		margin-bottom:1px;
 		padding:5px 5px 5px 5px;
-		/*width: 150px;*/
+		/* width: 150px; */
 		}	
 		
 		div#PSLeftNav a,div#PSLeftNav a:hover,div#PSLeftNav a:active,div#PSLeftNav a:visited 

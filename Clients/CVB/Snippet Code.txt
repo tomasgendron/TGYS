@@ -1,19 +1,19 @@
 Left Snippet
 ===============
 <!-- this is just here for spacing -->
-
-<div style='width:200px'> </div>
+<div style='width:250px'> </div>
+<div id="PSLeftNav">
+<div class='homePageCategory'></div>
+<div linkcat="Category 2"></div>
+<div></div>
 
 Right Snippet
 ===============
 <div id="PSRightNav">
-<div class='homePageCategory'>CATEGORY 1</div>
+<div class='homePageCategory'></div>
 <div linkcat="Category 1"></div>
-<div class='homePageCategory'>CATEGORY 2</div>
-<div linkcat="Category 2"></div>
-<div class='homePageCategory'>CATEGORY 3</div>
-<div linkcat="Category 3"></div>
 </div></div>
+
 
 Bottom Snippet
 ===============

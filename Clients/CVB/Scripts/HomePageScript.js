@@ -38,14 +38,14 @@ var PS = window.PS ||
 	var loadLeftNav = function()
 	{
 		//$("div#PSLeftNav").html("loaded");
-		$("div#PSLeftNav").empty();
-		var p = RunAjax(_spPageContextInfo.siteServerRelativeUrl + "/_api/web/lists/getByTitle('HomepageMenu')/items?$filter=Location eq 'Left'");
+		//$("div#PSLeftNav").empty();
+		var p = RunAjax(_spPageContextInfo.siteAbsoluteUrl + "/_api/web/lists/getByTitle('HomepageMenu')/items?$filter=Location eq 'Left'&$orderby=LinkOrder");
 		p.done(function(data){
 		
 			console.log(data);
 			$.each(data.d.results,function(){
-				$("div#PSLeftNav").append("<div style='color:#"+ this.TextColor +";background-color:#"+ this.BgdColor +"'><a href='"+ this.Url +"'>"+ this.Title+"</a></div>")
-				
+				//$("div#PSLeftNav").append("<div style='color:#"+ this.TextColor +";background-color:#"+ this.BgdColor +"'><a href='"+ this.Url +"'>"+ this.Title+"</a></div>")
+				$("div[linkcat='" + this.LinkCategory + "']").append("<div style='color:#"+ this.TextColor +";background-color:#"+ this.BgdColor +"'><a href='"+ this.Url +"'>"+ this.Title+"</a></div>");
 			});
 		
 		});
