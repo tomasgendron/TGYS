@@ -48,7 +48,7 @@ margin-right: 45px !important;
 </style>
 ==========================
 CEWP bottom runs this file (no title, no chrometype_:
-/sites/YOURSITEHERE/siteassets/js/HomePageScript.js
+/sites/YOURSITEHERE/siteassets/PSV/js/HomePageScript.js
 ==========================
 
 

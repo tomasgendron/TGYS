@@ -1,0 +1,44 @@
+<table id="mainWebPartTable">
+		<tr>
+			<td style='vertical-align:top'>
+				<div id="zzz" class='zzz'>
+					<div height=250 id="PSRotator" class='PSRotator' style="border: black 4px solid; background-color: #3a3a3a;">
+						<table>
+							<tr>
+								<td valign='top' id="rotLeft">
+									<div id="rotLeftImage" style='float:left;'> </div>
+								</td>
+								<td valign='top' id="rotCentre">
+									<div style='float:right;'>
+										<h2 id='rotLeftTitle' style="color: #ffffff;font-weight: bold;"></h2>
+										<h3 id='rotLeftSubTitle' style="color: rgb(2, 105, 55);font-weight: bold;font-style: italic;"></h3>
+										<p id='rotLeftContent' style="color: #ffffff;"></p>
+									</div>
+								</td>
+								<td valign='top' id="rotRight">
+									<table id="rotRightTable" cellspacing="0" cellpadding="0">
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</td>
+			<td>
+			</td>
+			<td>
+				<div id="PSRightNav">
+					<div class='homePageCategory'><img src="/siteassets/images/eventsicon.gif" /> Upcoming Events</div>
+					<div class='homelinkContainer' linkcat="Upcoming Events"></div>
+					<div class='homePageCategory' id="homepagecatQL"><img src="/siteassets/images/Linkicon.gif" /> Quick Links</div>
+					<div class='homelinkContainer' linkcat="Quick Links"></div>
+				</div>
+			</td>
+		</tr>
+	</table>
+	
+	<script>
+		function runWhenJQueryLoaded() {
+			$.getScript(_spPageContextInfo.siteAbsoluteUrl + "/SiteAssets/js/PSRotatorNews.js");
+		}
+	</script>
