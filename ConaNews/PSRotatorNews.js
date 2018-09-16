@@ -49,7 +49,7 @@ var PSRotator = window.PSRotator ||
 
 				$("#rotLeftImage").html("<img class='rotImage' src='"+ rdata.d.results[idx].LeftImage.Url +"' />" );
 				// $("#rotLeftContent").html(rdata.d.results[idx].Content + "<br><br><a href='" + rdata.d.results[idx].ReadMoreURL.Url + "'>" + rdata.d.results[idx].ReadMoreURL.Description +"</a>");
-				$("#rotLeftContent").html(rdata.d.results[idx].Content + "<br><br><a href='" + rdata.d.results[idx].ReadMoreURL.Url + "'><img src='https://go.conaresources.com/SiteAssets/images/ReadMoreIcon.gif'></img></a>");
+				$("#rotLeftContent").html(rdata.d.results[idx].Content + "<br><br><p style='text-align:right;'><a href='" + rdata.d.results[idx].ReadMoreURL.Url + "'><img src='https://go.conaresources.com/SiteAssets/images/ReadMoreIcon.gif'></img></a></p>");
 				$("#rotLeftTitle").html(rdata.d.results[idx].Title);
 				$("#rotLeftSubTitle").html(rdata.d.results[idx].Sub_x0020_Title);
 				
